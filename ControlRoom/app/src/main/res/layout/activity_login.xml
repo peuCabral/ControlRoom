@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646"
+        app:srcCompat="@drawable/fundo_cadastrar" />
+
+    <LinearLayout
+        android:id="@+id/linarLogin"
+        android:layout_width="254dp"
+        android:layout_height="189dp"
+        android:background="#75c7fb"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666">
+
+        <EditText
+            android:id="@+id/loginText2"
+            style="@style/EditTextFormField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_edit_text"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Login"
+            android:typeface="normal" />
+
+        <EditText
+            android:id="@+id/senhaText2"
+            style="@style/EditTextFormField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_edit_text"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Senha"
+            android:typeface="normal" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="monospace"
+        android:text="Realize o seu Login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#F3EEEE"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icone_do_login"
+        android:layout_width="42dp"
+        android:layout_height="39dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linarLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/linarLogin"
+        app:layout_constraintTop_toTopOf="@+id/linarLogin"
+        app:layout_constraintVertical_bias="0.086"
+        app:srcCompat="@mipmap/icone_login_circle" />
+
+    <ImageView
+        android:id="@+id/icone_senha"
+        android:layout_width="45dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="@+id/icone_do_login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/icone_do_login"
+        app:layout_constraintTop_toTopOf="@+id/icone_do_login"
+        android:src="@drawable/icone_senha"
+        android:contentDescription="senha" />
+
+
+    <ImageButton
+        android:id="@+id/return_button2"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:rotation="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_setinha" />
+
+    <Button
+        android:id="@+id/button_confirm2"
+        style="@android:style/Widget.Material.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Confirm"
+        app:layout_constraintEnd_toEndOf="@+id/linarLogin"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/linarLogin"
+        app:layout_constraintTop_toBottomOf="@+id/linarLogin" />
+</androidx.constraintlayout.widget.ConstraintLayout>
