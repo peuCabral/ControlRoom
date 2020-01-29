@@ -21,40 +21,45 @@
 
     <LinearLayout
         android:id="@+id/linarLogin"
-        android:layout_width="254dp"
-        android:layout_height="189dp"
+        android:layout_width="270dp"
+        android:layout_height="123dp"
         android:background="#75c7fb"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.666">
+        app:layout_constraintVertical_bias="0.538">
+
+
 
         <EditText
-            android:id="@+id/loginText2"
+            android:id="@+id/loginEmail"
             style="@style/EditTextFormField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@drawable/shape_edit_text"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Login"
+            android:hint="Login"
+            android:inputType="textEmailAddress"
             android:typeface="normal" />
 
+
         <EditText
-            android:id="@+id/senhaText2"
+            android:id="@+id/loginSenha"
             style="@style/EditTextFormField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@drawable/shape_edit_text"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Senha"
+            android:hint="Senha"
+            android:inputType="text"
             android:typeface="normal" />
+
+
 
     </LinearLayout>
 
@@ -63,42 +68,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="108dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="monospace"
         android:text="Realize o seu Login"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#F3EEEE"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/icone_do_login"
-        android:layout_width="42dp"
-        android:layout_height="39dp"
+        android:layout_width="37dp"
+        android:layout_height="42dp"
         app:layout_constraintBottom_toBottomOf="@+id/linarLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/linarLogin"
         app:layout_constraintTop_toTopOf="@+id/linarLogin"
-        app:layout_constraintVertical_bias="0.086"
+        app:layout_constraintVertical_bias="0.101"
         app:srcCompat="@mipmap/icone_login_circle" />
+
 
     <ImageView
         android:id="@+id/icone_senha"
-        android:layout_width="45dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="68dp"
+        android:contentDescription="senha"
+        android:src="@drawable/icone_senha"
         app:layout_constraintEnd_toEndOf="@+id/icone_do_login"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/icone_do_login"
-        app:layout_constraintTop_toTopOf="@+id/icone_do_login"
-        android:src="@drawable/icone_senha"
-        android:contentDescription="senha" />
-
+        app:layout_constraintTop_toTopOf="@+id/icone_do_login" />
 
     <ImageButton
         android:id="@+id/return_button2"
@@ -114,15 +118,15 @@
         android:src="@drawable/ic_setinha" />
 
     <Button
-        android:id="@+id/button_confirm2"
+        android:id="@+id/buttonLogin"
         style="@android:style/Widget.Material.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="sans-serif-medium"
         android:text="Confirm"
         app:layout_constraintEnd_toEndOf="@+id/linarLogin"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.361"
         app:layout_constraintStart_toStartOf="@+id/linarLogin"
         app:layout_constraintTop_toBottomOf="@+id/linarLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

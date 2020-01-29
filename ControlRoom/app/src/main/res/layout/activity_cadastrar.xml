@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/fundo_cadastrar" />
 
     <Button
-        android:id="@+id/butao_confirm"
+        android:id="@+id/butao_cadastrar"
         style="@android:style/Widget.Material.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,8 +49,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="320dp"
-        android:layout_height="301dp"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
         android:background="#75c7fb"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/fundoCadastrar"
@@ -65,12 +65,14 @@
             style="@style/EditTextFormField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/shape_edit_text"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
-            android:typeface="normal" />
+            android:hint="Name"
+            android:typeface="normal"/>
 
         <EditText
             android:id="@+id/emailText"
@@ -81,75 +83,58 @@
             android:background="@drawable/shape_edit_text"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Email"
+            android:hint="Email"
             android:typeface="normal" />
 
-        <EditText
-            android:id="@+id/loginText"
-            style="@style/EditTextFormField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/shape_edit_text"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Login"
-            android:typeface="normal" />
 
         <EditText
             android:id="@+id/senhaText"
             style="@style/EditTextFormField"
-            android:layout_width="260dp"
-            android:layout_height="56dp"
-            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:background="@drawable/shape_edit_text"
             android:ems="10"
+            android:hint="Senha"
             android:inputType="textPersonName"
-            android:text="Senha"
             android:typeface="normal" />
 
 
     </LinearLayout>
 
+
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="71dp"
-        android:layout_height="wrap_content"
+        android:layout_width="38dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.031"
+        app:layout_constraintVertical_bias="0.157"
         app:srcCompat="@mipmap/icone_nome_circle" />
 
     <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="70dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="136dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6"
-        app:srcCompat="@mipmap/icone_login_circle" />
-
-    <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="69dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="37dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="@+id/imageView6"
         app:srcCompat="@mipmap/icone_email_circle" />
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="59dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="192dp"
+        android:layout_width="40dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="@+id/imageView6"
         app:srcCompat="@mipmap/icone_senha_circle" />

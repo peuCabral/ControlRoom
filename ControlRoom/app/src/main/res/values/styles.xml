@@ -19,4 +19,5 @@
         <item name="android:maxLines">1</item>
     </style>
 
+    <style name="noActionBar" parent="Theme.AppCompat.NoActionBar"/>
 </resources>

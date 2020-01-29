@@ -4,4 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" />
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/nome_sala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="40dp"
+        android:text="NomeSala"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icone_sala"
+        android:layout_width="88dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/nome_sala"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/nome_sala"
+        app:layout_constraintTop_toTopOf="@+id/nome_sala"
+        app:srcCompat="@drawable/sala1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

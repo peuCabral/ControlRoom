@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Cadastro_ou_Login">
+    tools:context=".ui.Cadastro_ou_Login"
+    style="@style/noActionBar">
 
     <ImageView
         android:id="@+id/fundo"
@@ -24,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="188dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Control Room"
@@ -46,10 +47,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/cadastrar"
-        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="@+id/cadastrar"
         app:layout_constraintTop_toBottomOf="@+id/cadastrar"
-        app:layout_constraintVertical_bias="0.494" />
+        app:layout_constraintVertical_bias="0.437" />
 
     <TextView
         android:id="@+id/ou"
@@ -61,13 +62,13 @@
         android:text="ou"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#ECE5E8"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/login"
         app:layout_constraintEnd_toEndOf="@+id/cadastrar"
         app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="@+id/cadastrar"
         app:layout_constraintTop_toBottomOf="@+id/cadastrar"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintVertical_bias="0.56" />
 
     <Button
         android:id="@+id/cadastrar"
@@ -75,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="316dp"
+        android:layout_marginTop="356dp"
         android:layout_marginEnd="24dp"
         android:text="Cadastre-se"
         android:textSize="18sp"
@@ -86,9 +87,10 @@
 
     <ImageView
         android:id="@+id/circulo"
-        android:layout_width="99dp"
-        android:layout_height="126dp"
+        android:layout_width="85dp"
+        android:layout_height="115dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.666"
@@ -98,16 +100,15 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="70dp"
-        android:layout_height="78dp"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fundo"
-        app:layout_constraintVertical_bias="0.137"
+        app:layout_constraintVertical_bias="0.159"
         app:srcCompat="@drawable/icone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
