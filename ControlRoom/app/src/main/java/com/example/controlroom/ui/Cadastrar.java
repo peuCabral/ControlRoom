@@ -13,15 +13,19 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.controlroom.R;
+import com.example.model.Empresa;
 import com.example.services.VerificadorCadastro;
 import com.example.services.VerificadorEmpresa;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Cadastrar extends AppCompatActivity {
 
@@ -126,6 +130,8 @@ public class Cadastrar extends AppCompatActivity {
         emailText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
+
+
                 if (!hasFocus) {
                     String emailAfterTextChanged = emailText.getText().toString();
 
@@ -143,18 +149,52 @@ public class Cadastrar extends AppCompatActivity {
 
                                     if (organizacoesStringFromServer.length() > 0) {
 
-                                        // 2 - inicializar um jsonarray a partir da string recebida
+                                        JSONArray jsonArray = new JSONArray(organizacoesStringFromServer);
+                                        List<Empresa> listaEmpresa = new ArrayList<>();
+                                        // 3 - verifica o length do array > 0
+
+                                        if (jsonArray.length() > 0) {
+
+                                            for (int i = 0; i < jsonArray.length(); i++) {
+
+                                                JSONObject jsonObject = jsonArray.getJSONObject(i);
+
+                                                if (jsonObject.has("id") && jsonObject.has("nome") && jsonObject.has("tipoOrganizacao")) {
+
+                                                    int id = jsonObject.getInt("id");
+                                                    String nome = jsonObject.getString("nome");
+                                                    String tipoEmpresa = jsonObject.getString("tipoOrganizacao");
+
+                                                    Empresa newEmpresa = new Empresa();
+
+                                                    newEmpresa.setId(id);
+
+                                                    listaEmpresa.add(newEmpresa);
+
+                                                }
+
+
+                                            }
+
+
+                                            // 4 - se tem coisa no array, pega a posicao do array e inicializa um jsonobject
+
+                                            // 5 - verifica se o jsonObject possui os campos id, nome e tipoOrganizacao
+
+                                            // 6 - se ele possuir esses 3 atributos, entao voce passa pra variaveis
+                                            // 7 - criar em tempo de execuao um spinner com os as organizacoes
+
+
+                                        } else {
+                                            mostrarMensagem("Erro");
+
+                                        }
 
 
                                     } else {
+                                        Toast.makeText(getApplicationContext(), "Não pertence a nenhuma organização", Toast.LENGTH_LONG);
 
                                     }
-                                    // 3 - verifica o length do array > 0
-                                    // 4 - se tem coisa no array, pega a posicao do array e inicializa um jsonobject
-                                    // 5 - verifica se o jsonObject possui os campos id, nome e tipoOrganizacao
-                                    // 6 - se ele possuir esses 3 atributos, entao voce passa pra variaveis
-                                    // 7 - criar em tempo de execuao um spinner com os as organizacoes
-
 
                                 } catch (Exception e) {
                                     e.printStackTrace();
