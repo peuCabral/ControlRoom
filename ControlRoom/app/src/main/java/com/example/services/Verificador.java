@@ -12,7 +12,7 @@ public class Verificador extends AsyncTask<String, Void, String> {
     @Override
     protected String doInBackground(String... strings) {
 
-        String urlWS = "http://172.30.248.133:8080/ReservaDeSala/rest/usuario/login";
+        String urlWS = "http://172.30.248.134:8080/ReservaDeSala/rest/usuario/login";
 
         StringBuilder result = new StringBuilder();
         try {

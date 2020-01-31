@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +17,8 @@ public class Login extends AppCompatActivity {
 
     private EditText email;
     private EditText senha;
-    private Button btnLogin;
+    private ImageButton btn_login;
+    private  ImageButton return_button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +30,24 @@ public class Login extends AppCompatActivity {
 
     private void iniciarComponentes() {
 
-        btnLogin = findViewById(R.id.buttonLogin);
-
+        btn_login = findViewById(R.id.btn_login);
         email = findViewById(R.id.loginEmail);
         senha = findViewById(R.id.loginSenha);
+        return_button2 =findViewById(R.id.return_button2);
 
         realizandoLogin();
+
+        return_button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirClasse(Cadastro_ou_Login.class);
+            }
+        });
 
     }
 
     private void realizandoLogin() {
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        btn_login.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
 

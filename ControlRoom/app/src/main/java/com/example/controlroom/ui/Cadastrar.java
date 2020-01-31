@@ -4,6 +4,8 @@ import android.util.Base64;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -30,12 +32,14 @@ import java.util.List;
 public class Cadastrar extends AppCompatActivity {
 
     private ImageButton return_button;
-    private Button butao_cadastrar;
+    private ImageButton butao_cadastrar;
     private EditText nameText;
     private EditText emailText;
     private EditText senhaText;
     private Spinner spinnerEmpresa;
-
+    List<Empresa> empresaList = new ArrayList<>();
+    List<String> empresaListaNomes = new ArrayList<>();
+    int idEmpresa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +63,9 @@ public class Cadastrar extends AppCompatActivity {
         inicializaEmailFocusListener();
         voltarTela();
 
+        clickSpinner();
+
+
     }
 
 
@@ -71,11 +78,10 @@ public class Cadastrar extends AppCompatActivity {
                 String nome = nameText.getText().toString();
                 String email = emailText.getText().toString();
                 String senha = senhaText.getText().toString();
-                //int id_organizacao = getIdOrganizacao();
 
 
                 if (verificarDados() == true) {
-                    createJson(email, nome, senha);
+                    createJson(email, nome, senha, idEmpresa);
 
                     // startClass(Login.class);
 
@@ -90,7 +96,7 @@ public class Cadastrar extends AppCompatActivity {
 
     }
 
-    private void createJson(String email, String nome, String senha) {
+    private void createJson(String email, String nome, String senha, int idOrg) {
 
         JSONObject usuarioJson = new JSONObject();
 
@@ -99,7 +105,7 @@ public class Cadastrar extends AppCompatActivity {
             usuarioJson.put("email", email);
             usuarioJson.put("senha", senha);
             usuarioJson.put("nome", nome);
-            // usuarioJson.put("idOrganizacao", idOrganizacao);
+             usuarioJson.put("idOrganizacao", idOrg);
 
 
             System.out.println(usuarioJson.toString());
@@ -150,7 +156,7 @@ public class Cadastrar extends AppCompatActivity {
                                     if (organizacoesStringFromServer.length() > 0) {
 
                                         JSONArray jsonArray = new JSONArray(organizacoesStringFromServer);
-                                        List<Empresa> listaEmpresa = new ArrayList<>();
+
                                         // 3 - verifica o length do array > 0
 
                                         if (jsonArray.length() > 0) {
@@ -169,7 +175,23 @@ public class Cadastrar extends AppCompatActivity {
 
                                                     newEmpresa.setId(id);
 
-                                                    listaEmpresa.add(newEmpresa);
+                                                    newEmpresa.setNomeEmpresa(nome);
+
+                                                    newEmpresa.setTipoEmpresa(tipoEmpresa);
+
+                                                    empresaList.add(newEmpresa);
+
+                                                    empresaListaNomes.add(newEmpresa.getNomeEmpresa());
+
+                                                    ArrayAdapter<String>adapter = new ArrayAdapter<>(Cadastrar.this, android.R.layout.simple_spinner_item, empresaListaNomes);
+
+                                                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+                                                    spinnerEmpresa.setAdapter(adapter);
+
+                                                    spinnerEmpresa.setVisibility(View.VISIBLE);
+
+
 
                                                 }
 
@@ -210,6 +232,21 @@ public class Cadastrar extends AppCompatActivity {
         });
 
 
+    }
+
+    private void clickSpinner(){
+
+        spinnerEmpresa.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                idEmpresa = empresaList.get(position).getId();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
     }
 
     private void voltarTela() {

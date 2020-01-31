@@ -6,130 +6,70 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+
     <ImageView
-        android:id="@+id/fundoCadastrar"
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
+        android:layout_height="738dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/fundo_cadastrar" />
+        app:layout_constraintVertical_bias="0.94"
+        app:srcCompat="@drawable/melhor_login" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/butao_cadastrar"
-        style="@android:style/Widget.Material.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Confirm"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:tint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadastre_se"
+        app:srcCompat="@mipmap/btn_login" />
 
     <TextView
         android:id="@+id/cadastre_se"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="376dp"
         android:fontFamily="monospace"
         android:text="Cadastre-se"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/fundoCadastrar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fundoCadastrar"
-        app:layout_constraintVertical_bias="0.135" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="270dp"
-        android:layout_height="270dp"
-        android:background="#75c7fb"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/fundoCadastrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fundoCadastrar"
-        app:layout_constraintVertical_bias="0.556">
-
-        <Spinner
-            android:id="@+id/spinnerEmpresa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/nameText"
-            style="@style/EditTextFormField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/shape_edit_text"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Name"
-            android:typeface="normal"/>
-
-        <EditText
-            android:id="@+id/emailText"
-            style="@style/EditTextFormField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/shape_edit_text"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Email"
-            android:typeface="normal" />
-
-
-        <EditText
-            android:id="@+id/senhaText"
-            style="@style/EditTextFormField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/shape_edit_text"
-            android:ems="10"
-            android:hint="Senha"
-            android:inputType="textPersonName"
-            android:typeface="normal" />
-
-
-    </LinearLayout>
-
+        app:layout_constraintTop_toTopOf="@+id/nameText" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="38dp"
         android:layout_height="45dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="68dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.157"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toEndOf="@+id/nameText"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/icone_nome_circle" />
 
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="37dp"
         android:layout_height="46dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/emailText"
         app:layout_constraintTop_toTopOf="@+id/imageView6"
         app:srcCompat="@mipmap/icone_email_circle" />
 
@@ -137,24 +77,87 @@
         android:id="@+id/imageView14"
         android:layout_width="40dp"
         android:layout_height="43dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="96dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        android:layout_marginLeft="1dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/senhaText"
         app:layout_constraintTop_toTopOf="@+id/imageView6"
         app:srcCompat="@mipmap/icone_senha_circle" />
 
     <ImageButton
         android:id="@+id/return_button"
         style="@android:style/Widget.Holo.ImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
         android:layout_marginTop="16dp"
         android:rotation="180"
+        android:src="@drawable/ic_setinha"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_setinha" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameText"
+        style="@style/EditTextFormField"
+        android:layout_width="247dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/shape_edit_text"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/return_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/senhaText"
+        style="@style/EditTextFormField"
+        android:layout_width="253dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_edit_text"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPersonName"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="@+id/emailText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/emailText"
+        app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+    <EditText
+        android:id="@+id/emailText"
+        style="@style/EditTextFormField"
+        android:layout_width="255dp"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="90dp"
+        android:background="@drawable/shape_edit_text"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="@+id/nameText"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="@+id/nameText"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+    <Spinner
+        android:id="@+id/spinnerEmpresa"
+        android:layout_width="247dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        android:background="@color/colorLigth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senhaText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

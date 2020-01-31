@@ -8,67 +8,23 @@
 
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="750dp"
+        android:layout_height="738dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.646"
-        app:srcCompat="@drawable/fundo_cadastrar" />
-
-    <LinearLayout
-        android:id="@+id/linarLogin"
-        android:layout_width="270dp"
-        android:layout_height="123dp"
-        android:background="#75c7fb"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538">
-
-
-
-        <EditText
-            android:id="@+id/loginEmail"
-            style="@style/EditTextFormField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/shape_edit_text"
-            android:ems="10"
-            android:hint="Login"
-            android:inputType="textEmailAddress"
-            android:typeface="normal" />
-
-
-        <EditText
-            android:id="@+id/loginSenha"
-            style="@style/EditTextFormField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/shape_edit_text"
-            android:ems="10"
-            android:hint="Senha"
-            android:inputType="text"
-            android:typeface="normal" />
-
-
-
-    </LinearLayout>
+        app:layout_constraintVertical_bias="0.94"
+        app:srcCompat="@drawable/melhor_login" />
 
     <TextView
         android:id="@+id/loginText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="412dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="monospace"
         android:text="Realize o seu Login"
@@ -76,6 +32,7 @@
         android:textColor="#F3EEEE"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,26 +40,36 @@
         android:id="@+id/icone_do_login"
         android:layout_width="37dp"
         android:layout_height="42dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linarLogin"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/linarLogin"
-        app:layout_constraintTop_toTopOf="@+id/linarLogin"
-        app:layout_constraintVertical_bias="0.101"
+        app:layout_constraintStart_toEndOf="@+id/loginEmail"
+        app:layout_constraintTop_toTopOf="@+id/loginEmail"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/icone_login_circle" />
-
 
     <ImageView
         android:id="@+id/icone_senha"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="48dp"
         android:contentDescription="senha"
         android:src="@drawable/icone_senha"
         app:layout_constraintEnd_toEndOf="@+id/icone_do_login"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/icone_do_login"
         app:layout_constraintTop_toTopOf="@+id/icone_do_login" />
+
+    <ImageButton
+        android:id="@+id/btn_login"
+        android:layout_width="51dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginBottom="84dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/btn_login" />
 
     <ImageButton
         android:id="@+id/return_button2"
@@ -117,16 +84,38 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/ic_setinha" />
 
-    <Button
-        android:id="@+id/buttonLogin"
-        style="@android:style/Widget.Material.Button.Inset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Confirm"
-        app:layout_constraintEnd_toEndOf="@+id/linarLogin"
-        app:layout_constraintHorizontal_bias="0.361"
-        app:layout_constraintStart_toStartOf="@+id/linarLogin"
-        app:layout_constraintTop_toBottomOf="@+id/linarLogin" />
+    <EditText
+        android:id="@+id/loginEmail"
+        style="@style/EditTextFormField"
+        android:layout_width="235dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/shape_edit_text"
+        android:ems="10"
+        android:hint="Login"
+        android:inputType="textEmailAddress"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/loginSenha"
+        style="@style/EditTextFormField"
+        android:layout_width="231dp"
+        android:layout_height="41dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/shape_edit_text"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="text"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.616"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
