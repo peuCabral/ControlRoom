@@ -151,13 +151,11 @@ public class Cadastrar extends AppCompatActivity {
                                     String organizacoesStringFromServer = new VerificadorEmpresa().execute(dominio).get();
                                     System.out.println("Organizações em string: " + organizacoesStringFromServer);
 
-                                    // 1 - verifica se a string nao eh vazia -> exibe erro dizendo q n existe organizacao com o dominio informado
 
                                     if (organizacoesStringFromServer.length() > 0) {
 
                                         JSONArray jsonArray = new JSONArray(organizacoesStringFromServer);
 
-                                        // 3 - verifica o length do array > 0
 
                                         if (jsonArray.length() > 0) {
 
@@ -192,19 +190,10 @@ public class Cadastrar extends AppCompatActivity {
                                                     spinnerEmpresa.setVisibility(View.VISIBLE);
 
 
-
                                                 }
 
 
                                             }
-
-
-                                            // 4 - se tem coisa no array, pega a posicao do array e inicializa um jsonobject
-
-                                            // 5 - verifica se o jsonObject possui os campos id, nome e tipoOrganizacao
-
-                                            // 6 - se ele possuir esses 3 atributos, entao voce passa pra variaveis
-                                            // 7 - criar em tempo de execuao um spinner com os as organizacoes
 
 
                                         } else {

@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class Empresa {
 
-       private int id;
+        private int id;
         private String nomeEmpresa;
         private int idOrganizacaoPai;
         private String tipoEmpresa;

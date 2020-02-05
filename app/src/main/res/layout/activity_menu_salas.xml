@@ -6,6 +6,16 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fundo_salas" />
+
+    <ImageView
         android:id="@+id/id_banner_inicial_eventos"
         android:layout_width="0dp"
         android:layout_height="120dp"
@@ -22,11 +32,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/montserrat_bold"
+        android:gravity="start"
         android:text="Salas de Reuniao"
         android:textAlignment="viewStart"
-        android:textColor="#FF8C00 "
+        android:textColor="@android:color/white"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="@id/id_banner_inicial_eventos"
         app:layout_constraintEnd_toEndOf="@id/id_banner_inicial_eventos"
@@ -42,7 +53,6 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="600dp"
-        android:fontFamily="@font/montserrat_bold"
         android:text="Salas Cadastradas e suas Disponibilidades"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
@@ -51,7 +61,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_titulo_page"
-        app:layout_constraintVertical_bias="0.07999998" />
+        app:layout_constraintVertical_bias="0.07999998"
+        android:gravity="start"
+        android:layout_marginLeft="20dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/id_botao_visao_mensal"
@@ -62,7 +74,8 @@
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_day" />
+        app:srcCompat="@android:drawable/ic_menu_day"
+        android:layout_marginRight="30dp" />
 
     <ListView
         android:id="@+id/lista_eventos_salas_listview"

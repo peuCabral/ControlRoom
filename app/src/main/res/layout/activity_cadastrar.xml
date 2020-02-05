@@ -7,57 +7,54 @@
     android:orientation="vertical">
 
 
-
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="738dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"
-        app:srcCompat="@drawable/melhor_login" />
-
-
-    <ImageButton
-        android:id="@+id/butao_cadastrar"
+        android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@null"
-        android:tint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cadastre_se"
-        app:srcCompat="@mipmap/btn_login" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/novo_fundo" />
 
     <TextView
         android:id="@+id/cadastre_se"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="376dp"
+        android:layout_width="226dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="96dp"
         android:fontFamily="monospace"
         android:text="Cadastre-se"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintHorizontal_bias="0.605"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nameText" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/butao_cadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="304dp"
+        android:background="@null"
+        android:tint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nameText"
+        app:srcCompat="@mipmap/btn_login" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="38dp"
         android:layout_height="45dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="248dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toEndOf="@+id/nameText"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/icone_nome_circle" />
 
@@ -68,7 +65,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/emailText"
         app:layout_constraintTop_toTopOf="@+id/imageView6"
         app:srcCompat="@mipmap/icone_email_circle" />
@@ -77,10 +74,10 @@
         android:id="@+id/imageView14"
         android:layout_width="40dp"
         android:layout_height="43dp"
-        android:layout_marginTop="96dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
         android:layout_marginLeft="1dp"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/senhaText"
         app:layout_constraintTop_toTopOf="@+id/imageView6"
         app:srcCompat="@mipmap/icone_senha_circle" />
@@ -103,14 +100,14 @@
         style="@style/EditTextFormField"
         android:layout_width="247dp"
         android:layout_height="40dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="248dp"
         android:background="@drawable/shape_edit_text"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
         android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.587"
         app:layout_constraintStart_toStartOf="@+id/return_button"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -146,17 +143,18 @@
         app:layout_constraintEnd_toEndOf="@+id/nameText"
         app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="@+id/nameText"
-        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+        app:layout_constraintTop_toBottomOf="@+id/nameText"
+        android:layout_marginRight="90dp" />
 
     <Spinner
         android:id="@+id/spinnerEmpresa"
         android:layout_width="247dp"
         android:layout_height="35dp"
-        android:layout_marginTop="8dp"
-        android:visibility="invisible"
+        android:layout_marginTop="12dp"
         android:background="@color/colorLigth"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintHorizontal_bias="0.628"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/senhaText" />
 
