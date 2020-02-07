@@ -24,6 +24,7 @@ public class Login extends AppCompatActivity {
     private EditText email;
     private EditText senha;
     private ImageButton btn_login;
+
     private ImageButton return_button2;
     public static final String Name = "nameKey";
     public static final String Email = "emailKey";
@@ -36,11 +37,11 @@ public class Login extends AppCompatActivity {
 
         preferences = getSharedPreferences(userPreferences, Context.MODE_PRIVATE);
 
-        if(preferences.contains("emailUser")){
+  /*/      if(preferences.contains("userEmail")){
 
-            abrirClasse(MenuSalas.class);
+        abrirClasse(MenuSalas.class);
 
-        }
+    }/*/
 
         setContentView(R.layout.activity_login);
 
@@ -50,6 +51,7 @@ public class Login extends AppCompatActivity {
     private void iniciarComponentes() {
 
         btn_login = findViewById(R.id.btn_login);
+
         email = findViewById(R.id.loginEmail);
         senha = findViewById(R.id.loginSenha);
         return_button2 = findViewById(R.id.return_button2);

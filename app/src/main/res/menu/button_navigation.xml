@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <item
+            android:id="@+id/nav_salas"
+            android:icon="@drawable/ic_room"
+            android:title="Salas" />
+
+        <item
+            android:id="@+id/nav_calendario"
+            android:icon="@drawable/ic_today"
+            android:title="Calendário" />
+
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_perfil"
+            android:title="Perfil" />
+
+</menu>
