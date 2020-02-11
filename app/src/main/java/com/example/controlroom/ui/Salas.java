@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.content.SharedPreferences;
+import android.widget.ListView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -16,7 +18,19 @@ import com.example.model.SalaModel;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Salas  extends Fragment {
+
+
+    private SharedPreferences preferences;
+    public static final String userPreferences = "userPreferences";
+    private List<SalaModel> salas = new ArrayList<>();
+    private List<String> nomeSalas = new ArrayList<>();
+    private ArrayAdapter<String> adapter;
+    private ListView listSalas;
 
     private View view;
     @Nullable
@@ -24,9 +38,13 @@ public class Salas  extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_list, container, false);
+
+        preferences =getActivity().getSharedPreferences(userPreferences, Context.MODE_PRIVATE);
+
+        inserirSalas();
+
         return view;
 
-        preferences = getSharedPreferences(userPreferences, Context.MODE_PRIVATE);
 
     }
 
@@ -34,7 +52,7 @@ public class Salas  extends Fragment {
 
         String requestSalas = null;
         try {
-            requestSalas = new RequestSalas().execute(preferences.getString("userIdEmpresa", null)).get();
+            requestSalas = new VerificadorSalas().execute(preferences.getString("userIdEmpresa", null)).get();
 
             System.out.println(requestSalas);
 
@@ -55,25 +73,29 @@ public class Salas  extends Fragment {
                     SalaModel newSala = new SalaModel();
 
                     newSala.setNomeSala(nome);
-
-                    newSala.setDimensaoSala(dimensao);
+                    newSala.setTamanhoSala(dimensao);
                     newSala.setCapacidade(capacidade);
                     newSala.setLocalizacao(localizacao);
                     newSala.setArCondicionado(arcondicionado);
                     newSala.setMultimidia(multimidia);
 
-                    salas.add(newSala);
-                    nomeSalas.add(newSala.getNomeSala());
+                    salas.add(newSala); // New Sala Model
+                    nomeSalas.add(newSala.getNomeSala()); // Possivel mudanca para essa linha
+
+                    //SalaModel();
+
+
 
 
                 }
-                listSalas = view.findViewById(R.id.lista_salas_listview);
+                listSalas = view.findViewById(R.id.lista_eventos);
                 adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, nomeSalas);
                 listSalas.setAdapter(adapter);
 
             }
 
         } catch (Exception e) {
+
             e.printStackTrace();
         }
 

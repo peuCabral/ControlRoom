@@ -8,9 +8,9 @@
     >
 
     <ListView
-        android:id="@+id/lista_eventos_salas_listview"
-        android:layout_width="416dp"
-        android:layout_height="181dp"
+        android:id="@+id/lista_eventos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:divider="@null"
         android:dividerHeight="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
@@ -21,14 +21,13 @@
         app:layout_constraintVertical_bias="0.13"
         tools:listitem="@layout/unidade_evento">
 
-
     </ListView>
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
-        android:scaleType="fitXY"
         android:layout_height="wrap_content"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
