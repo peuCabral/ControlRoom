@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,101 +8,185 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/imageView10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/fundo_salas" />
+        app:srcCompat="@drawable/fundo_descricao_sala"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
-        android:id="@+id/name_sala"
+        android:id="@+id/id_arcondicionado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginLeft="152dp"
-        android:layout_marginTop="172dp"
-        android:text="Nome Sala"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/white"
-        android:typeface="normal"
-        app:fontFamily="sans-serif"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:textColor="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toEndOf="@+id/id_titulo_arcond"
+        app:layout_constraintTop_toBottomOf="@+id/id_multimidia" />
 
     <TextView
-        android:id="@+id/capacidade_sala"
+        android:id="@+id/id_multimidia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="256dp"
-        android:text="Capacidade Sala"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/white"
-        android:visibility="visible"
-        app:fontFamily="sans-serif"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:textColor="#FF5722"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/id_titulo_multimidia"
+        app:layout_constraintTop_toBottomOf="@+id/id_tamanho" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/id_tamanho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="Tamanho Sala"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        android:textColor="#FF5722"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toEndOf="@+id/id_titulotamanho"
+        app:layout_constraintTop_toBottomOf="@+id/id_capacidade" />
+
+    <TextView
+        android:id="@+id/id_titulo_arcond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="76dp"
+        android:text="Possui Ar Condicionado:"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toStartOf="@+id/ar_condicionado"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/capacidade_sala"
-        app:layout_constraintTop_toBottomOf="@+id/capacidade_sala" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="308dp"
-        android:text="Localizacao"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toStartOf="@+id/ar_condicionado"
-        app:layout_constraintHorizontal_bias="0.347"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/name_sala" />
-
-    <TextView
-        android:id="@+id/multimidia_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginLeft="108dp"
-        android:text="Multimidia"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/capacidade_sala"
-        app:layout_constraintStart_toEndOf="@+id/capacidade_sala" />
-
-    <TextView
-        android:id="@+id/ar_condicionado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="Ar Condicionado"
-        android:textColor="@android:color/white"
-        app:layout_constraintStart_toStartOf="@+id/multimidia_id"
-        app:layout_constraintTop_toBottomOf="@+id/multimidia_id" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_titulotamanho" />
 
     <ImageButton
-        android:id="@+id/return_button3"
-        android:layout_width="53dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="132dp"
-        android:srcCompat="@drawable/ic_setinha"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/return_button4"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:rotation="180"
+        android:src="@drawable/ic_setinha"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/id_nome_sala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:foregroundGravity="center_vertical"
+        android:gravity="left"
+        android:text="Nome Sala"
+        android:textColor="#FF5722"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/return_button4"></TextView>
+
+    <ImageView
+        android:id="@+id/risco_desing"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/traco_desing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_nome_sala" />
+
+    <TextView
+        android:id="@+id/textEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:foregroundGravity="center_vertical"
+        android:gravity="left"
+        android:text="Caractristicas da Sala"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/risco_desing"></TextView>
+
+
+    <ImageView
+        android:id="@+id/risco_desing2"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/traco_desing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEvento" />
+
+    <TextView
+        android:id="@+id/id_titulocapacidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Capacidade da Sala"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/risco_desing2" />
+
+    <TextView
+        android:id="@+id/id_titulotamanho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:text="Tamanho da Sala"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_titulocapacidade" />
+
+    <TextView
+        android:id="@+id/id_titulo_multimidia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="28dp"
+        android:text="Possui Multimidia:"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_titulotamanho" />
+
+    <TextView
+        android:id="@+id/id_capacidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textColor="#FF5722"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/id_titulocapacidade"
+        app:layout_constraintTop_toBottomOf="@+id/risco_desing2" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

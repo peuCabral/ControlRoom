@@ -32,6 +32,9 @@
 
         <activity android:name=".ui.MenuSalas"></activity>
 
+        <activity android:name=".ui.DescricaoSala"></activity>
+
+
     </application>
 
 </manifest>

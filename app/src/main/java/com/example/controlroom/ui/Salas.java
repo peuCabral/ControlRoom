@@ -1,10 +1,12 @@
 package com.example.controlroom.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.content.SharedPreferences;
 import android.widget.ListView;
@@ -32,20 +34,34 @@ public class Salas  extends Fragment {
     private ArrayAdapter<String> adapter;
     private ListView listSalas;
 
+
     private View view;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_list, container, false);
 
-        preferences =getActivity().getSharedPreferences(userPreferences, Context.MODE_PRIVATE);
+        preferences = getActivity().getSharedPreferences(userPreferences, Context.MODE_PRIVATE);
+
 
         inserirSalas();
+        abrirListaDetalhes();
 
         return view;
 
 
+    }
+
+    private void abrirListaDetalhes() {
+        listSalas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                abrirClasse(DescricaoSala.class);
+            }
+        });
     }
 
     private void inserirSalas() {
@@ -79,12 +95,8 @@ public class Salas  extends Fragment {
                     newSala.setArCondicionado(arcondicionado);
                     newSala.setMultimidia(multimidia);
 
-                    salas.add(newSala); // New Sala Model
-                    nomeSalas.add(newSala.getNomeSala()); // Possivel mudanca para essa linha
-
-                    //SalaModel();
-
-
+                    salas.add(newSala);
+                    nomeSalas.add(newSala.getNomeSala()); //
 
 
                 }
@@ -99,6 +111,11 @@ public class Salas  extends Fragment {
             e.printStackTrace();
         }
 
+    }
 
+    private void abrirClasse(Class classe) {
+        Intent intent = new Intent(getActivity(), classe);
+        startActivity(intent);
+        getActivity().finish();
     }
 }
