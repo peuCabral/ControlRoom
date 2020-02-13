@@ -17,6 +17,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/nova_tela_estilo" />
 
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="44dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/senhaText"
+        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        android:src="@drawable/icone_senha" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="37dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/emailText"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        android:src="@drawable/ic_email_black_24dp" />
+
     <TextView
         android:id="@+id/cadastre_se"
         android:layout_width="226dp"
@@ -55,30 +77,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/icone_nome_circle" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="37dp"
-        android:layout_height="46dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/emailText"
-        app:layout_constraintTop_toTopOf="@+id/imageView6"
-        app:srcCompat="@mipmap/icone_email_circle" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="40dp"
-        android:layout_height="43dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/senhaText"
-        app:layout_constraintTop_toTopOf="@+id/imageView6"
-        app:srcCompat="@mipmap/icone_senha_circle" />
 
     <ImageButton
         android:id="@+id/return_button"

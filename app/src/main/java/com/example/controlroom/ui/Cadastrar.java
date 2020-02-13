@@ -46,11 +46,11 @@ public class Cadastrar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar);
 
-        iniciarComponentes();
+        StartComponents();
 
     }
 
-    private void iniciarComponentes() {
+    private void StartComponents() {
 
         nameText = findViewById(R.id.nameText);
         emailText = findViewById(R.id.emailText);

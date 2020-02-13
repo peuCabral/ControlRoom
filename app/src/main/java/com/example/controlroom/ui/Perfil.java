@@ -48,7 +48,7 @@ public class Perfil extends Fragment {
 
         String nome = preferences.getString("userName", null);
         String email = preferences.getString("userEmail", null);
-        String empresa = preferences.getString("userIdEmpresa", null);
+        String empresa = preferences.getString("userEmpresa", null); // Aqui tirei somemte o ID para ver se algo muda
 
         System.out.println(nome);
 
@@ -67,8 +67,8 @@ public class Perfil extends Fragment {
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.remove("userEmail");
                 editor.remove("userName");
-                editor.remove("userIdEmpresa");
-                
+                editor.remove("userEmpresa");  // Tirei apenas o ID para ver se algo muda
+
                 editor.commit();
                 abrirClasse(Cadastro_ou_Login.class);
             }

@@ -17,14 +17,28 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="28dp"
+        android:text="Disponibilidade da Sala"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toTopOf="@+id/btn_calendario"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
         android:id="@+id/id_arcondicionado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="44dp"
         android:text="TextView"
-        android:textColor="#FF5722"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.308"
         app:layout_constraintStart_toEndOf="@+id/id_titulo_arcond"
         app:layout_constraintTop_toBottomOf="@+id/id_multimidia" />
 
@@ -32,11 +46,11 @@
         android:id="@+id/id_multimidia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="44dp"
         android:text="TextView"
-        android:textColor="#FF5722"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toEndOf="@+id/id_titulo_multimidia"
         app:layout_constraintTop_toBottomOf="@+id/id_tamanho" />
 
@@ -44,11 +58,11 @@
         android:id="@+id/id_tamanho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="44dp"
         android:text="TextView"
-        android:textColor="#FF5722"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toEndOf="@+id/id_titulotamanho"
         app:layout_constraintTop_toBottomOf="@+id/id_capacidade" />
 
@@ -57,11 +71,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="92dp"
         android:text="Possui Ar Condicionado:"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="casual"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.306"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/id_titulotamanho" />
 
@@ -89,7 +106,8 @@
         android:text="Nome Sala"
         android:textColor="#FF5722"
         android:textSize="24sp"
-        android:textStyle="normal"
+        android:textStyle="normal|bold"
+        app:fontFamily="casual"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/return_button4"></TextView>
@@ -116,7 +134,8 @@
         android:text="Caractristicas da Sala"
         android:textColor="@android:color/white"
         android:textSize="24sp"
-        android:textStyle="normal"
+        android:textStyle="normal|bold"
+        app:fontFamily="casual"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,11 +159,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:text="Capacidade da Sala"
+        android:layout_marginTop="24dp"
+        android:text="Capacidade da Sala:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:fontFamily="casual"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.277"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/risco_desing2" />
 
@@ -153,11 +177,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="24dp"
-        android:text="Tamanho da Sala"
+        android:layout_marginTop="36dp"
+        android:text="Tamanho da Sala:"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="casual"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.289"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/id_titulocapacidade" />
 
@@ -169,8 +196,11 @@
         android:layout_marginTop="28dp"
         android:text="Possui Multimidia:"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="casual"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/id_titulotamanho" />
 
@@ -178,15 +208,93 @@
         android:id="@+id/id_capacidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
         android:text="TextView"
-        android:textColor="#FF5722"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/id_titulocapacidade"
         app:layout_constraintTop_toBottomOf="@+id/risco_desing2" />
+
+    <ImageView
+        android:id="@+id/icone_capacidade"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/id_titulocapacidade"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEvento"
+        android:src="@drawable/ic_people_black_24dp" />
+
+    <ImageView
+        android:id="@+id/icone_tamanho"
+        android:layout_width="34dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_zoom_out_map_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/id_titulotamanho"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icone_capacidade" />
+
+    <ImageView
+        android:id="@+id/icone_multimidia"
+        android:layout_width="41dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_ondemand_video_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/id_titulo_multimidia"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icone_tamanho" />
+
+    <ImageView
+        android:id="@+id/ir_condicionado"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/id_titulo_arcond"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icone_multimidia"
+        android:src="@drawable/ic_ac_unit_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/btn_reserva"
+        android:layout_width="44dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginBottom="124dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_reserva" />
+
+    <ImageButton
+        android:id="@+id/btn_calendario"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="132dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@mipmap/ic_calendario" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="Reserve a Sala"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reserva"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

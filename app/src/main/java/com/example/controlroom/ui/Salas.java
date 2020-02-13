@@ -98,12 +98,10 @@ public class Salas  extends Fragment {
                     salas.add(newSala);
                     nomeSalas.add(newSala.getNomeSala()); //
 
-
                 }
                 listSalas = view.findViewById(R.id.lista_eventos);
                 adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, nomeSalas);
                 listSalas.setAdapter(adapter);
-
             }
 
         } catch (Exception e) {
@@ -112,7 +110,6 @@ public class Salas  extends Fragment {
         }
 
     }
-
     private void abrirClasse(Class classe) {
         Intent intent = new Intent(getActivity(), classe);
         startActivity(intent);
