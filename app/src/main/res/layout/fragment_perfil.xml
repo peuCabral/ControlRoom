@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/fundo_salas">
 
-    <ImageView
+ <!--   <ImageView
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,18 +18,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/fundo_salas" />
+        app:srcCompat="@drawable/fundo_salas" />-->
 
-    <ImageButton
-        android:id="@+id/btn_logout"
-        android:layout_width="45dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
-        android:layout_marginBottom="140dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@mipmap/ic_back" />
+   <ImageButton
+       android:id="@+id/btn_logout"
+       android:layout_width="45dp"
+       android:layout_height="48dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="1.0"
+       app:layout_constraintStart_toEndOf="@+id/textView4"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.38"
+       app:srcCompat="@mipmap/ic_back" />
 
     <TextView
         android:id="@+id/email_perfil"
@@ -35,7 +38,7 @@
         android:layout_height="32dp"
         android:layout_marginStart="108dp"
         android:layout_marginLeft="108dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="28dp"
         android:text="Email"
         android:textColor="@android:color/white"
         android:textSize="18sp"
@@ -61,7 +64,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="108dp"
         android:layout_marginLeft="108dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="244dp"
         android:text="Empresa"
         android:textColor="@android:color/white"
         android:textSize="18sp"
@@ -70,8 +73,8 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="47dp"
-        android:layout_height="42dp"
+        android:layout_width="40dp"
+        android:layout_height="37dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:contentDescription="TODO"
@@ -81,8 +84,8 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="50dp"
-        android:layout_height="47dp"
+        android:layout_width="41dp"
+        android:layout_height="37dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
@@ -94,55 +97,55 @@
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="69dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="61dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/ic_business_center_black_24dp"
         app:layout_constraintBottom_toBottomOf="@+id/empresa_perfil"
         app:layout_constraintEnd_toStartOf="@+id/empresa_perfil"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginBottom="160dp"
         android:text="Faca o Logout"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:fontFamily="casual"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="46dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
-        android:layout_marginBottom="140dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/ic_editar" />
+   <ImageButton
+       android:id="@+id/btn_editar"
+       android:layout_width="46dp"
+       android:layout_height="43dp"
+       android:layout_marginStart="232dp"
+       android:layout_marginLeft="232dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:srcCompat="@mipmap/ic_editar" />
 
-    <TextView
+   <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginBottom="160dp"
         android:text="Edite Seus Dados"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:fontFamily="casual"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

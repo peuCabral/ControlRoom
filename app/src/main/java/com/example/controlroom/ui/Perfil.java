@@ -22,6 +22,7 @@ public class Perfil extends Fragment {
     public static final String userPreferences = "userPreferences";
     private View view;
     private ImageButton btn_logout;
+    private ImageButton btn_editar;
 
     @Nullable
     @Override
@@ -33,13 +34,14 @@ public class Perfil extends Fragment {
         email_perfil = (TextView) view.findViewById(R.id.email_perfil);
         empresa_perfil = (TextView)  view.findViewById(R.id.empresa_perfil);
         btn_logout = (ImageButton) view.findViewById(R.id.btn_logout);
+        btn_editar = (ImageButton) view.findViewById(R.id.btn_editar);
         
         inserirDados();
         logout();
+        //editarDados();
         
         return view;
     }
-
 
 
     public void inserirDados() {
@@ -48,13 +50,16 @@ public class Perfil extends Fragment {
 
         String nome = preferences.getString("userName", null);
         String email = preferences.getString("userEmail", null);
-        String empresa = preferences.getString("userEmpresa", null); // Aqui tirei somemte o ID para ver se algo muda
+        String empresa = preferences.getString("userNomeEmpresa", null);
+        String empresa_id = preferences.getString("userIdEmpresa", null);
+
 
         System.out.println(nome);
 
         nome_perfil.setText(nome);
         email_perfil.setText(email);
         empresa_perfil.setText(empresa);
+
 
 
     }
@@ -67,7 +72,7 @@ public class Perfil extends Fragment {
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.remove("userEmail");
                 editor.remove("userName");
-                editor.remove("userEmpresa");  // Tirei apenas o ID para ver se algo muda
+                editor.remove("userIdEmpresa");
 
                 editor.commit();
                 abrirClasse(Cadastro_ou_Login.class);
@@ -83,4 +88,6 @@ public class Perfil extends Fragment {
         startActivity(intent);
         getActivity().finish();
     }
+
+
 }

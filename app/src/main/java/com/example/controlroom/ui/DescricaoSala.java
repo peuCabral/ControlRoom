@@ -7,6 +7,8 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.controlroom.R;
+import com.example.model.SalaModel;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.widget.TextView;
@@ -18,6 +20,7 @@ public class DescricaoSala extends AppCompatActivity {
     private TextView id_tamanho;
     private TextView id_multimidia;
     private TextView id_arcondicionado;
+    private TextView id_nome_sala;
     private SharedPreferences preferences;
     public static final String userPreferences = "userPreferences";
     private ImageButton return_button4;
@@ -28,16 +31,45 @@ public class DescricaoSala extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.descricao_sala);
 
-        id_capacidade = (TextView) findViewById(R.id.id_titulocapacidade);
-        id_tamanho = (TextView) findViewById(R.id.id_titulotamanho);
-        id_multimidia = (TextView) findViewById(R.id.id_titulo_multimidia);
-        id_arcondicionado = (TextView) findViewById(R.id.id_titulo_arcond);
+        id_capacidade = (TextView) findViewById(R.id.id_capacidade);
+        id_tamanho = (TextView) findViewById(R.id.id_tamanho);
+        id_multimidia = (TextView) findViewById(R.id.id_multimidia);
+        id_arcondicionado = (TextView) findViewById(R.id.id_arcondicionado);
         return_button4 = findViewById(R.id.return_button4);
         btn_calendario = findViewById(R.id.btn_calendario);
+        id_nome_sala = findViewById(R.id.id_nome_sala);
+
+        Intent intent = getIntent();
+        SalaModel salaSelecionada = (SalaModel) intent.getSerializableExtra("salaSelecionada");
+
+        id_nome_sala.setText(salaSelecionada.getNomeSala());
+        id_capacidade.setText(salaSelecionada.getCapacidade());
+        id_tamanho.setText(salaSelecionada.getTamanhoSala());
+
+        String recebeAr = salaSelecionada.getMultimidia();
+        String recebeMulti=salaSelecionada.getArCondicionado();
+
+        if(recebeAr.equals("true")){
+            id_arcondicionado.setText("Sim");
+        }
+
+        else if (recebeAr.equals("false")){
+            id_arcondicionado.setText("Nao");
+
+        }
+
+        if(recebeMulti.equals("true")){
+            id_multimidia.setText("Sim");
+        }
+
+        else if (recebeMulti.equals("false")){
+            id_multimidia.setText("Nao");
+
+        }
 
 
         inserirDados();
-        telaCalendario();
+
 
         return_button4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,18 +94,9 @@ public class DescricaoSala extends AppCompatActivity {
     }
 
 
-    private void telaCalendario() {
-        btn_calendario.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startClass(Calendario.class);
-
-            }
-
-        });
 
     }
-}
+
 
 
 

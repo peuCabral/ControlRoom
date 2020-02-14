@@ -1,5 +1,6 @@
 package com.example.controlroom.ui;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -8,12 +9,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.controlroom.R;
+import com.example.model.SalaModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.List;
 
 public class MenuSalas extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
+/*
 
+    private List<SalaModel> salas;
+    private Context context;
+
+    public MenuSalas(List<SalaModel> listaSalas, Context context) {
+        this.salas = listaSalas;
+        this.context = context;
+    }
+*/
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +42,7 @@ public class MenuSalas extends AppCompatActivity {
         }
 
 
-        };
+        }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -45,16 +58,9 @@ public class MenuSalas extends AppCompatActivity {
                             selectedFragment = new Perfil();
                             break;
 
-                        case R.id.nav_calendario:
-                            selectedFragment = new Calendario();
-                            break;
-
-
-
                     }
 
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,
-                            selectedFragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, selectedFragment).commit();
 
                     return true;
                 }

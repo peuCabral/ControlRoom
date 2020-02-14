@@ -7,8 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.content.SharedPreferences;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
@@ -16,6 +17,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.controlroom.R;
 import com.example.model.SalaModel;
+import com.example.services.VerificadorSalas;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -24,18 +26,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Salas  extends Fragment {
+public class Salas extends Fragment {
 
 
     private SharedPreferences preferences;
     public static final String userPreferences = "userPreferences";
-    private List<SalaModel> salas = new ArrayList<>();
+
     private List<String> nomeSalas = new ArrayList<>();
     private ArrayAdapter<String> adapter;
     private ListView listSalas;
 
 
+    private List<SalaModel> salas = new ArrayList<>();
+    //private Context context;
+
+
     private View view;
+
+   /* public Salas(List<SalaModel> listaSalas) {
+        this.salas = listaSalas;
+        this.context = context;
+    }*/
+
+
 
     @Nullable
     @Override
@@ -44,6 +57,8 @@ public class Salas  extends Fragment {
         view = inflater.inflate(R.layout.fragment_list, container, false);
 
         preferences = getActivity().getSharedPreferences(userPreferences, Context.MODE_PRIVATE);
+
+        listSalas = view.findViewById(R.id.lista_eventos);
 
 
         inserirSalas();
@@ -59,7 +74,11 @@ public class Salas  extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                abrirClasse(DescricaoSala.class);
+                Intent intent = new Intent(getActivity(), DescricaoSala.class);
+                intent.putExtra("salaSelecionada", salas.get(position));
+                startActivity(intent);
+
+//                abrirClasse(DescricaoSala.class);
             }
         });
     }
@@ -96,7 +115,7 @@ public class Salas  extends Fragment {
                     newSala.setMultimidia(multimidia);
 
                     salas.add(newSala);
-                    nomeSalas.add(newSala.getNomeSala()); //
+                    nomeSalas.add(newSala.getNomeSala());
 
                 }
                 listSalas = view.findViewById(R.id.lista_eventos);
@@ -110,6 +129,7 @@ public class Salas  extends Fragment {
         }
 
     }
+
     private void abrirClasse(Class classe) {
         Intent intent = new Intent(getActivity(), classe);
         startActivity(intent);
