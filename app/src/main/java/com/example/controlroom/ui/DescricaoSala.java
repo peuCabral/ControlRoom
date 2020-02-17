@@ -24,6 +24,7 @@ public class DescricaoSala extends AppCompatActivity {
     private SharedPreferences preferences;
     public static final String userPreferences = "userPreferences";
     private ImageButton return_button4;
+    private ImageButton btn_reserva;
     private ImageButton btn_calendario;
 
     @Override
@@ -38,6 +39,7 @@ public class DescricaoSala extends AppCompatActivity {
         return_button4 = findViewById(R.id.return_button4);
         btn_calendario = findViewById(R.id.btn_calendario);
         id_nome_sala = findViewById(R.id.id_nome_sala);
+        btn_reserva = findViewById(R.id.btn_reserva);
 
         Intent intent = getIntent();
         SalaModel salaSelecionada = (SalaModel) intent.getSerializableExtra("salaSelecionada");
@@ -47,22 +49,18 @@ public class DescricaoSala extends AppCompatActivity {
         id_tamanho.setText(salaSelecionada.getTamanhoSala());
 
         String recebeAr = salaSelecionada.getMultimidia();
-        String recebeMulti=salaSelecionada.getArCondicionado();
+        String recebeMulti = salaSelecionada.getArCondicionado();
 
-        if(recebeAr.equals("true")){
+        if (recebeAr.equals("true")) {
             id_arcondicionado.setText("Sim");
-        }
-
-        else if (recebeAr.equals("false")){
+        } else if (recebeAr.equals("false")) {
             id_arcondicionado.setText("Nao");
 
         }
 
-        if(recebeMulti.equals("true")){
+        if (recebeMulti.equals("true")) {
             id_multimidia.setText("Sim");
-        }
-
-        else if (recebeMulti.equals("false")){
+        } else if (recebeMulti.equals("false")) {
             id_multimidia.setText("Nao");
 
         }
@@ -72,6 +70,13 @@ public class DescricaoSala extends AppCompatActivity {
 
 
         return_button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startClass(MenuSalas.class);
+            }
+        });
+
+        btn_reserva.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startClass(MenuSalas.class);
@@ -92,7 +97,6 @@ public class DescricaoSala extends AppCompatActivity {
         this.finish();
 
     }
-
 
 
     }

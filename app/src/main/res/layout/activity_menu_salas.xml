@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/colorFundo"
     android:layout_height="match_parent">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -81,7 +82,7 @@
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="0dp"
-        android:layout_height="540dp"
+        android:layout_height="match_parent"
         android:maxHeight="540dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
