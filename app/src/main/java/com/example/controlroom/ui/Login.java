@@ -79,10 +79,10 @@ public class Login extends AppCompatActivity {
                     try {
                         String authReturn = new Verificador().execute(emailStr, senhaStr).get();
 
-                        //Toast.makeText(getApplicationContext(),authReturn,Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),authReturn,Toast.LENGTH_LONG).show();
 
                         if (authReturn.length() > 0) {
-                            Toast.makeText(getApplicationContext(), "Login realizado com sucesso", Toast.LENGTH_LONG).show();
+                           // Toast.makeText(getApplicationContext(), "Login realizado com sucesso", Toast.LENGTH_LONG).show();
 
                             JSONObject usuarioJSON = new JSONObject(authReturn);
 

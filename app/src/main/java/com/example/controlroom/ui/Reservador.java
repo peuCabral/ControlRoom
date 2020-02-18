@@ -14,6 +14,7 @@ package com.example.controlroom.ui;
 //import java.util.List;
 //
 public class Reservador   {
+
 //    private TextView nomeSala, textTamanhoSala, textCapacidade;
 //    private ImageView iconCheckArCondicionado, iconCheckMultimidia;
 //    private List<Salas> salas = new ArrayList<>();
@@ -106,4 +107,7 @@ public class Reservador   {
   }
 //
 //
+
+
+
 

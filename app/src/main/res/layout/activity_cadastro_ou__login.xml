@@ -89,32 +89,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/circulo"
-        android:layout_width="85dp"
-        android:layout_height="115dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:srcCompat="@drawable/circulo"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="5dp" />
+<!--    <ImageView-->
+<!--        android:id="@+id/circulo"-->
+<!--        android:layout_width="85dp"-->
+<!--        android:layout_height="115dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/imageView4"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/imageView4"-->
+<!--        app:layout_constraintHorizontal_bias="0.666"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/imageView4"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imageView4"-->
+<!--        app:srcCompat="@drawable/circulo"-->
+<!--        android:layout_marginLeft="16dp"-->
+<!--        android:layout_marginRight="5dp" />-->
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="69dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fundo"
-        app:layout_constraintVertical_bias="0.159"
-        app:srcCompat="@drawable/icone" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView4"-->
+<!--        android:layout_width="69dp"-->
+<!--        android:layout_height="69dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/fundo"-->
+<!--        app:layout_constraintVertical_bias="0.159"-->
+<!--      app:srcCompat="@drawable/icone" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
