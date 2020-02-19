@@ -57,6 +57,9 @@ public class MenuSalas extends AppCompatActivity {
                         case R.id.nav_perfil:
                             selectedFragment = new Perfil();
                             break;
+                         case R.id.nav_calendario:
+                            selectedFragment = new Calendario();
+                            break;
 
                     }
 
