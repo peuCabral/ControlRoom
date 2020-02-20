@@ -23,7 +23,6 @@ public class DescricaoSala extends AppCompatActivity {
     private TextView id_nome_sala;
     private SharedPreferences preferences;
     public static final String userPreferences = "userPreferences";
-    private ImageButton return_button4;
     private ImageButton btn_reserva;
     private ImageButton btn_calendario;
 
@@ -32,11 +31,14 @@ public class DescricaoSala extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.descricao_sala);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
         id_capacidade = (TextView) findViewById(R.id.id_capacidade);
         id_tamanho = (TextView) findViewById(R.id.id_tamanho);
         id_multimidia = (TextView) findViewById(R.id.id_multimidia);
         id_arcondicionado = (TextView) findViewById(R.id.id_arcondicionado);
-        return_button4 = findViewById(R.id.return_button4);
         btn_calendario = findViewById(R.id.btn_calendario);
         id_nome_sala = findViewById(R.id.id_nome_sala);
         btn_reserva = findViewById(R.id.btn_reserva);
@@ -69,13 +71,6 @@ public class DescricaoSala extends AppCompatActivity {
         inserirDados();
 
 
-        return_button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startClass(MenuSalas.class);
-            }
-        });
-
         btn_reserva.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,6 +93,13 @@ public class DescricaoSala extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onSupportNavigateUp(){
+
+        onBackPressed();
+
+        return  true;
+    }
 
     }
 

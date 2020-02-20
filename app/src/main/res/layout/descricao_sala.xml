@@ -12,9 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fundo_descricao_sala"
-        tools:layout_editor_absoluteX="13dp" />
+        app:srcCompat="@drawable/fundo_descricao_sala" />
 
     <TextView
         android:id="@+id/textView2"
@@ -82,24 +84,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/id_titulotamanho" />
 
-    <ImageButton
-        android:id="@+id/return_button4"
-        style="@android:style/Widget.Holo.ImageButton"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="16dp"
-        android:rotation="180"
-        android:src="@drawable/ic_setinha"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/id_nome_sala"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:foregroundGravity="center_vertical"
         android:gravity="left"
         android:text="Nome Sala"
@@ -108,9 +98,9 @@
         android:textStyle="normal|bold"
         app:fontFamily="casual"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/return_button4"></TextView>
+        app:layout_constraintTop_toTopOf="@+id/imageView10"></TextView>
 
     <ImageView
         android:id="@+id/risco_desing"

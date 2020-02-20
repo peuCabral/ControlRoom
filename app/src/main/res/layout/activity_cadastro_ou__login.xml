@@ -100,7 +100,7 @@
         app:layout_constraintHorizontal_bias="0.666"
        app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-       android:src="@drawable/thumbnail.png"
+       android:src="@drawable/thumbnail"
        android:layout_marginLeft="16dp"
        android:layout_marginRight="5dp" />
 
@@ -115,6 +115,6 @@
        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fundo"
         app:layout_constraintVertical_bias="0.159"
-        android:src="@drawable/icone_app.png" />
+        android:src="@drawable/icone_app" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
