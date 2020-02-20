@@ -8,11 +8,24 @@
     android:orientation="vertical" >
 
     <TextView
+        android:id="@+id/id_data_reserva"
+        android:layout_width="29dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="128dp"
+        android:text="Data"
+        android:background="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
         android:id="@+id/id_hora_final"
         android:layout_width="27dp"
         android:layout_height="23dp"
         android:layout_marginTop="296dp"
         android:background="#F44336"
+        android:text="Hora"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toEndOf="@+id/textView10"
@@ -20,10 +33,11 @@
 
     <TextView
         android:id="@+id/id_hora_inicio"
-        android:layout_width="29dp"
-        android:layout_height="22dp"
+        android:layout_width="75dp"
+        android:layout_height="20dp"
         android:layout_marginTop="224dp"
         android:background="#F44336"
+        android:text="Horario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintStart_toEndOf="@+id/textView9"
@@ -66,7 +80,7 @@
         android:layout_marginStart="92dp"
         android:layout_marginLeft="92dp"
         android:layout_marginTop="68dp"
-        android:text="Seu nome: "
+        android:text="Descricao"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -104,12 +118,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <TextView
-        android:id="@+id/id_nome_reservador"
-        android:layout_width="29dp"
-        android:layout_height="20dp"
+    <EditText
+        android:id="@+id/id_descricao_reserva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:background="#F44336"
+        android:inputType="text"
+        android:hint="descricao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.143"
         app:layout_constraintStart_toEndOf="@+id/textView7"
@@ -172,16 +188,4 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/ic_reserva" />
 
-    <EditText
-        android:id="@+id/id_data_reserva"
-        android:layout_width="77dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="128dp"
-        android:background="#FF5722"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.346"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

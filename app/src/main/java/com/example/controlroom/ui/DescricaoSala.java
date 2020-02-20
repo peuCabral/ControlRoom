@@ -74,7 +74,7 @@ public class DescricaoSala extends AppCompatActivity {
         btn_reserva.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startClass(MenuSalas.class);
+                startClass(Reservador.class);
             }
         });
     }

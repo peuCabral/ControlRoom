@@ -17,7 +17,10 @@
 
         <activity android:name=".ui.MainActivity"/>
 
-    <activity android:name=".ui.Cadastro_ou_Login" android:theme="@style/noActionBar">
+        <activity android:name=".ui.Reservador"/>
+
+
+        <activity android:name=".ui.Cadastro_ou_Login" android:theme="@style/noActionBar">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
