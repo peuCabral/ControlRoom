@@ -3,6 +3,7 @@ package com.example.controlroom.ui;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Base64;
@@ -18,9 +19,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.example.controlroom.R;
+import com.example.model.SalaModel;
 import com.example.services.VerificadorReserva;
 
-//
 //import android.graphics.drawable.Drawable;
 
 import org.json.JSONObject;
@@ -45,9 +46,9 @@ public class Reservador extends AppCompatActivity {
     private SharedPreferences preferences;
     public static final String userPreferences = "userPreferences";
     private ImageButton btn_reserva_confirmada;
-    private ImageButton btn_return_descricao;
     private TimePickerDialog timePicker;
     private DatePickerDialog datePicker;
+    int id_sala;
 
 
     @Override
@@ -144,7 +145,7 @@ public class Reservador extends AppCompatActivity {
 
     }
 
-    private  void salvarReserva(){
+    private void salvarReserva(){
         btn_reserva_confirmada.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -155,14 +156,18 @@ public class Reservador extends AppCompatActivity {
 
                 System.out.println(data);
                 System.out.println(horaInicio);
+                System.out.println(descricao);
 
 
-                createJson(descricao, data, horaInicio, horaFinal);
+
+                id_sala = salas
+
+                createJson(id_sala,descricao, horaInicio, horaFinal, data);
 
             }
         });
     }
-    private void createJson(String tituloReuniao, String horarioMarcadoInicial, String horarioMarcadoFinal, String dataMarcada) {
+    private void createJson(int id_sala, String tituloReuniao, String horarioMarcadoInicial, String horarioMarcadoFinal, String dataMarcada) {
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
@@ -192,7 +197,7 @@ public class Reservador extends AppCompatActivity {
             reservaJson.put("data_hora_inicio", dateHoraInicio.getTime());
             reservaJson.put("data_hora_fim", dateHoraFim.getTime());
 
-
+            System.out.println(preferences.getString("userId", null));
             System.out.println(reservaJson.toString());
 
             String reservaEncoded = Base64.encodeToString(reservaJson.toString().getBytes("UTF-8"), Base64.NO_WRAP);
