@@ -25,7 +25,7 @@ public class DescricaoSala extends AppCompatActivity {
     public static final String userPreferences = "userPreferences";
     private ImageButton btn_reserva;
     private ImageButton btn_calendario;
-
+    SalaModel salaSelecionada = new SalaModel();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +44,7 @@ public class DescricaoSala extends AppCompatActivity {
         btn_reserva = findViewById(R.id.btn_reserva);
 
         Intent intent = getIntent();
-        SalaModel salaSelecionada = (SalaModel) intent.getSerializableExtra("salaSelecionada");
+        salaSelecionada = (SalaModel) intent.getSerializableExtra("salaSelecionada");
 
         id_nome_sala.setText(salaSelecionada.getNomeSala());
         id_capacidade.setText(salaSelecionada.getCapacidade());
@@ -88,6 +88,7 @@ public class DescricaoSala extends AppCompatActivity {
 
     private void startClass(Class classe) {
         Intent intent = new Intent(this, classe);
+        intent.putExtra("salaSelecionada", salaSelecionada);
         startActivity(intent);
         this.finish();
 

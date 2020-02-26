@@ -36,7 +36,6 @@ import java.util.TimeZone;
 //import com.example.controlroom.R;
 //import java.util.ArrayList;
 //import java.util.List;
-//
 public class Reservador extends AppCompatActivity {
 
     private EditText id_nome_reservador;
@@ -49,6 +48,7 @@ public class Reservador extends AppCompatActivity {
     private TimePickerDialog timePicker;
     private DatePickerDialog datePicker;
     int id_sala;
+    SalaModel salaSelecionada = new SalaModel();
 
 
     @Override
@@ -57,6 +57,7 @@ public class Reservador extends AppCompatActivity {
         setContentView(R.layout.reserva);
 
         iniciaComponentes();
+
     }
 
     private void iniciaComponentes() {
@@ -159,8 +160,7 @@ public class Reservador extends AppCompatActivity {
                 System.out.println(descricao);
 
 
-
-                id_sala = salas
+               // id_sala = salas;
 
                 createJson(id_sala,descricao, horaInicio, horaFinal, data);
 
@@ -192,10 +192,14 @@ public class Reservador extends AppCompatActivity {
 
 
         try {
+
+            salaSelecionada = (SalaModel) getIntent().getSerializableExtra("salaSelecionada");
+
             reservaJson.put("id_usuario", preferences.getString("userId", null));
             reservaJson.put("descricao", tituloReuniao);
             reservaJson.put("data_hora_inicio", dateHoraInicio.getTime());
             reservaJson.put("data_hora_fim", dateHoraFim.getTime());
+            reservaJson.put("id_sala" , salaSelecionada.getId());
 
             System.out.println(preferences.getString("userId", null));
             System.out.println(reservaJson.toString());
@@ -212,6 +216,7 @@ public class Reservador extends AppCompatActivity {
                 onBackPressed();
 
             } else {
+                System.out.println(respostaMetodo);
                 Toast.makeText(
                         Reservador.this,
                         "A reserva não foi realizada!",

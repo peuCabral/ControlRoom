@@ -98,6 +98,7 @@ public class Salas extends Fragment {
                 for (int i = 0; i < salasJson.length(); i++) {
                     JSONObject salaJSon = salasJson.getJSONObject(i);
 
+                    int id = salaJSon.getInt("id");
                     String nome = salaJSon.getString("nome");
                     String dimensao = salaJSon.getString("areaDaSala");
                     String capacidade = salaJSon.getString("quantidadePessoasSentadas");
@@ -107,6 +108,7 @@ public class Salas extends Fragment {
 
                     SalaModel newSala = new SalaModel();
 
+                    newSala.setId(id);
                     newSala.setNomeSala(nome);
                     newSala.setTamanhoSala(dimensao);
                     newSala.setCapacidade(capacidade);
