@@ -81,6 +81,7 @@ public class DescricaoSala extends AppCompatActivity {
 
     public void inserirDados() {
 
+
         preferences = getSharedPreferences(userPreferences, Context.MODE_PRIVATE);
 
 
@@ -103,7 +104,5 @@ public class DescricaoSala extends AppCompatActivity {
     }
 
     }
-
-
 
 

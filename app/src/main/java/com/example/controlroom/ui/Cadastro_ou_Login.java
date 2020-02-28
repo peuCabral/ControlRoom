@@ -19,7 +19,6 @@ public class Cadastro_ou_Login extends AppCompatActivity {
     private SharedPreferences preferences;
     public static final String userPreferences = "userPreferences";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,9 +59,14 @@ public class Cadastro_ou_Login extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
     private void startMenuSalas() {
         Intent intent = new Intent(Cadastro_ou_Login.this, MenuSalas.class);
         startActivity(intent);
         finish();
+
     }
+
+
 }
+

@@ -27,7 +27,7 @@ public class Calendario extends Fragment {
     private View view;
     private CalendarView calendarView;
 
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_calendario, container, false);
 
          calendarView = (CalendarView) view.findViewById(R.id.calendarView);
@@ -38,13 +38,16 @@ public class Calendario extends Fragment {
          calendarView.setOnDayClickListener(new OnDayClickListener() {
              @Override
              public void onDayClick(EventDay eventDay) {
+
                  Calendar clickedDayCalendar = eventDay.getCalendar();
 
-                // DatePickerBuilder builder = new DatePickerBuilder(this, calendars)
+               //  DatePickerBuilder builder = new DatePickerBuilder(this, calendar)
                         // .pickerType(CalendarView.ONE_DAY_PICKER);
 
                  //DatePicker datePicker = builder.build();
                  //datePicker.show();
+
+
 
 
              }
