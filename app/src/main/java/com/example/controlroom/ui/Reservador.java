@@ -30,7 +30,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.TimeZone;
+//import java.util.TimeZone;
 //import android.widget.ImageView;
 
 //import com.example.controlroom.R;
@@ -112,6 +112,8 @@ public class Reservador extends AppCompatActivity {
                             }
                         }, hour, minutes, true);
                 timePicker.show();
+
+                // sTACKoVERFLO
             }
         });
 
@@ -159,7 +161,7 @@ public class Reservador extends AppCompatActivity {
                 System.out.println(horaInicio);
                 System.out.println(descricao);
 
-
+                //AbrirReserva na classe
                // id_sala = salas;
 
                 createJson(id_sala,descricao, horaInicio, horaFinal, data);
@@ -209,9 +211,9 @@ public class Reservador extends AppCompatActivity {
 
             String respostaMetodo = new VerificadorReserva().execute(reservaEncoded).get();
 
-            if (respostaMetodo.equals("Reserva realizada com sucesso")) {
+            if (respostaMetodo.equals("Reserva realizada com sucesso, consulte suas reservas no seu Perfil")) {
 
-                Toast.makeText(Reservador.this, "Reserva realizada com sucesso!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Reservador.this, "Reserva realizada com sucesso! Consulte suas reservas no Perfil", Toast.LENGTH_SHORT).show();
 
                 onBackPressed();
 
