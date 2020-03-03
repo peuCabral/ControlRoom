@@ -56,6 +56,9 @@ public class Reservador extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reserva);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         iniciaComponentes();
 
     }
@@ -177,7 +180,6 @@ public class Reservador extends AppCompatActivity {
         String datHoraFimStr = dataMarcada + " " + horarioMarcadoFinal;
 
 
-
         Date dateHoraFim = null, dateHoraInicio = null;
         try {
             dateHoraFim = simpleDateFormat.parse(datHoraInicioStr);
@@ -201,7 +203,7 @@ public class Reservador extends AppCompatActivity {
             reservaJson.put("descricao", tituloReuniao);
             reservaJson.put("data_hora_inicio", dateHoraInicio.getTime());
             reservaJson.put("data_hora_fim", dateHoraFim.getTime());
-            reservaJson.put("id_sala" , salaSelecionada.getId());
+            reservaJson.put("id_sala", salaSelecionada.getId());
 
             System.out.println(preferences.getString("userId", null));
             System.out.println(reservaJson.toString());
@@ -229,6 +231,10 @@ public class Reservador extends AppCompatActivity {
 
 
         }
-
     }
-}
+
+        public boolean onSupportNavigateUp(){
+            onBackPressed();
+            return  true;
+        }
+    }

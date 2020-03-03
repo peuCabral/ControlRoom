@@ -26,6 +26,7 @@ public class DescricaoSala extends AppCompatActivity {
     private ImageButton btn_reserva;
     private ImageButton btn_calendario;
     SalaModel salaSelecionada = new SalaModel();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +96,8 @@ public class DescricaoSala extends AppCompatActivity {
 
     }
 
-    @Override
+
+
     public boolean onSupportNavigateUp(){
 
         onBackPressed();

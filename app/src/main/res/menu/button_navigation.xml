@@ -19,4 +19,9 @@
             android:icon="@drawable/ic_perfil"
             android:title="Perfil" />
 
+    <item
+        android:id="@+id/nav_reservas"
+        android:icon="@drawable/salas_reservadas"
+        android:title="Minhas Rerservas" />
+
 </menu>

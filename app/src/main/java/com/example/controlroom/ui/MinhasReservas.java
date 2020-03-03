@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.controlroom.R;
 
-public class MinhasReservas extends AppCompatActivity {
+public class MinhasReservas extends Fragment {
 
 
 }

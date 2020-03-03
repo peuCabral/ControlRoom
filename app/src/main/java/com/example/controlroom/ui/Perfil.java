@@ -34,23 +34,21 @@ public class Perfil extends Fragment {
 
         nome_perfil = (TextView) view.findViewById(R.id.nome_perfil);
         email_perfil = (TextView) view.findViewById(R.id.email_perfil);
-        empresa_perfil = (TextView)  view.findViewById(R.id.empresa_perfil);
+        empresa_perfil = (TextView) view.findViewById(R.id.empresa_perfil);
         btn_logout = (ImageButton) view.findViewById(R.id.btn_logout);
         btn_editar = (ImageButton) view.findViewById(R.id.btn_editar);
         //buttonReservas =(ImageButton) view.findViewById(R.id.buttonReservas);
-        
+
         inserirDados();
         logout();
         //editarDados();
 
-        
+
         return view;
     }
 
 
-
-
-   // }
+    // }
     public void inserirDados() {
 
         preferences = getActivity().getSharedPreferences(userPreferences, Context.MODE_PRIVATE);
@@ -68,10 +66,9 @@ public class Perfil extends Fragment {
         empresa_perfil.setText(empresa);
 
 
-
     }
 
-    private void logout (){
+    private void logout() {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,8 +81,8 @@ public class Perfil extends Fragment {
                 editor.commit();
                 abrirClasse(Cadastro_ou_Login.class);
             }
-            
-            
+
+
         });
 
     }
@@ -94,7 +91,7 @@ public class Perfil extends Fragment {
         Intent intent = new Intent(getActivity(), classe);
         startActivity(intent);
         getActivity().finish();
+
+
     }
-
-
 }

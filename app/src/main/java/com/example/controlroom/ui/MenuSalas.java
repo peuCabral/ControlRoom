@@ -60,6 +60,9 @@ public class MenuSalas extends AppCompatActivity {
                          case R.id.nav_calendario:
                             selectedFragment = new Calendario();
                             break;
+                        case R.id.nav_reservas:
+                            selectedFragment = new MinhasReservas();
+                            break;
 
                     }
 
