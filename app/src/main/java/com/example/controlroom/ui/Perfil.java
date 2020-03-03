@@ -22,7 +22,7 @@ public class Perfil extends Fragment {
     public static final String userPreferences = "userPreferences";
     private View view;
     private ImageButton btn_logout;
-    private ImageButton buttonReservas;
+    //private ImageButton buttonReservas;
 
     private ImageButton btn_editar;
 
@@ -37,23 +37,20 @@ public class Perfil extends Fragment {
         empresa_perfil = (TextView)  view.findViewById(R.id.empresa_perfil);
         btn_logout = (ImageButton) view.findViewById(R.id.btn_logout);
         btn_editar = (ImageButton) view.findViewById(R.id.btn_editar);
-        buttonReservas =(ImageButton) view.findViewById(R.id.buttonReservas);
+        //buttonReservas =(ImageButton) view.findViewById(R.id.buttonReservas);
         
         inserirDados();
         logout();
         //editarDados();
-        abrirReservas();
+
         
         return view;
     }
 
-    public void abrirReservas() {
-
-        preferences = getActivity().getSharedPreferences(userPreferences, Context.MODE_PRIVATE);
-        abrirClasse(MinhasReservas.class);
 
 
-    }
+
+   // }
     public void inserirDados() {
 
         preferences = getActivity().getSharedPreferences(userPreferences, Context.MODE_PRIVATE);

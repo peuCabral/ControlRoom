@@ -56,14 +56,14 @@ public class DescricaoSala extends AppCompatActivity {
         if (recebeAr.equals("true")) {
             id_arcondicionado.setText("Sim");
         } else if (recebeAr.equals("false")) {
-            id_arcondicionado.setText("Nao");
+            id_arcondicionado.setText("Não");
 
         }
 
         if (recebeMulti.equals("true")) {
             id_multimidia.setText("Sim");
         } else if (recebeMulti.equals("false")) {
-            id_multimidia.setText("Nao");
+            id_multimidia.setText("Não");
 
         }
 

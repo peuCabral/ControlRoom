@@ -50,9 +50,9 @@
         android:id="@+id/nome_perfil"
         android:layout_width="wrap_content"
         android:layout_height="41dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginLeft="108dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="36dp"
         android:text="Nome"
         android:textColor="@android:color/white"
         android:textSize="18sp"
@@ -63,9 +63,9 @@
         android:id="@+id/empresa_perfil"
         android:layout_width="wrap_content"
         android:layout_height="38dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginLeft="112dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="180dp"
         android:text="Empresa"
         android:textColor="@android:color/white"
         android:textSize="18sp"
@@ -76,7 +76,7 @@
         android:id="@+id/imageView9"
         android:layout_width="40dp"
         android:layout_height="37dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
         android:contentDescription="TODO"
@@ -89,23 +89,23 @@
         android:layout_width="41dp"
         android:layout_height="37dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:src="@drawable/ic_mails_black_24dp"
         app:layout_constraintBottom_toBottomOf="@+id/email_perfil"
         app:layout_constraintEnd_toStartOf="@+id/email_perfil"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="61dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
         android:src="@drawable/ic_business_center_black_24dp"
         app:layout_constraintBottom_toBottomOf="@+id/empresa_perfil"
         app:layout_constraintEnd_toStartOf="@+id/empresa_perfil"
-        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintHorizontal_bias="0.914"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -153,28 +153,4 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-   <ImageButton
-       android:id="@+id/buttonReservas"
-       android:layout_width="63dp"
-       android:layout_height="54dp"
-       android:layout_marginStart="52dp"
-       android:layout_marginLeft="52dp"
-       android:layout_marginBottom="368dp"
-       app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintStart_toStartOf="parent"
-       android:src="@mipmap/ic_launcher_foreground" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="164dp"
-        android:layout_marginRight="164dp"
-        android:layout_marginBottom="380dp"
-        android:text="Minhas Reservas"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        app:fontFamily="casual"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
