@@ -4,15 +4,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
+import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import com.example.controlroom.R;
 
 public class Perfil extends Fragment {
@@ -22,8 +22,6 @@ public class Perfil extends Fragment {
     public static final String userPreferences = "userPreferences";
     private View view;
     private ImageButton btn_logout;
-    //private ImageButton buttonReservas;
-
     private ImageButton btn_editar;
 
     @Nullable
@@ -37,7 +35,7 @@ public class Perfil extends Fragment {
         empresa_perfil = (TextView) view.findViewById(R.id.empresa_perfil);
         btn_logout = (ImageButton) view.findViewById(R.id.btn_logout);
         btn_editar = (ImageButton) view.findViewById(R.id.btn_editar);
-        //buttonReservas =(ImageButton) view.findViewById(R.id.buttonReservas);
+
 
         inserirDados();
         logout();
@@ -47,8 +45,6 @@ public class Perfil extends Fragment {
         return view;
     }
 
-
-    // }
     public void inserirDados() {
 
         preferences = getActivity().getSharedPreferences(userPreferences, Context.MODE_PRIVATE);

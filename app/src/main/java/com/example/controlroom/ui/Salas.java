@@ -78,7 +78,7 @@ public class Salas extends Fragment {
                 intent.putExtra("salaSelecionada", salas.get(position));
                 startActivity(intent);
 
-//                abrirClasse(DescricaoSala.class);
+
             }
         });
     }
@@ -124,6 +124,7 @@ public class Salas extends Fragment {
                 adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, nomeSalas);
                 listSalas.setAdapter(adapter);
             }
+
 
         } catch (Exception e) {
 

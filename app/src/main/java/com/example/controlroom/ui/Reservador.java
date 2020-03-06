@@ -3,7 +3,6 @@ package com.example.controlroom.ui;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Base64;
@@ -21,21 +20,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.controlroom.R;
 import com.example.model.SalaModel;
 import com.example.services.VerificadorReserva;
-
-//import android.graphics.drawable.Drawable;
-
 import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-//import java.util.TimeZone;
-//import android.widget.ImageView;
 
-//import com.example.controlroom.R;
-//import java.util.ArrayList;
-//import java.util.List;
+
 public class Reservador extends AppCompatActivity {
 
     private EditText id_nome_reservador;
@@ -115,8 +107,6 @@ public class Reservador extends AppCompatActivity {
                             }
                         }, hour, minutes, true);
                 timePicker.show();
-
-                // sTACKoVERFLO
             }
         });
 
@@ -131,7 +121,6 @@ public class Reservador extends AppCompatActivity {
                 int day = calendar.get(Calendar.DAY_OF_MONTH);
                 int month = calendar.get(Calendar.MONTH);
                 int year = calendar.get(Calendar.YEAR);
-                // date picker dialog
                 datePicker = new DatePickerDialog(Reservador.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
@@ -165,7 +154,7 @@ public class Reservador extends AppCompatActivity {
                 System.out.println(descricao);
 
                 //AbrirReserva na classe
-               // id_sala = salas;
+               //id_sala = salas;
 
                 createJson(id_sala,descricao, horaInicio, horaFinal, data);
 
