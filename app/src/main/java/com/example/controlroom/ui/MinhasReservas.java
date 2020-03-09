@@ -1,25 +1,18 @@
 package com.example.controlroom.ui;
 
-<<<<<<< HEAD
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.SharedPreferences;
-=======
->>>>>>> 33b3478309104327f61a0e3dd774c0ecfbd3f5bb
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-<<<<<<< HEAD
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-=======
->>>>>>> 33b3478309104327f61a0e3dd774c0ecfbd3f5bb
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import com.example.controlroom.R;
-<<<<<<< HEAD
 import com.example.model.ControlSalas;
 import com.example.services.VerificadorReserva;
 import com.example.services.VerificadorSalasReservadas;
@@ -30,20 +23,15 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
-=======
->>>>>>> 33b3478309104327f61a0e3dd774c0ecfbd3f5bb
 
 public class MinhasReservas extends Fragment {
 
     private View view;
-<<<<<<< HEAD
     private SharedPreferences preferences;
     public static final String userPreferences = "userPreferences";
     private String verificadorReserva;
     private List <String> controlSalasString = new ArrayList<>();
     private List<ControlSalas> controlSalasList = new ArrayList<>();
-=======
->>>>>>> 33b3478309104327f61a0e3dd774c0ecfbd3f5bb
 
     @Nullable
     @Override
@@ -56,7 +44,6 @@ public class MinhasReservas extends Fragment {
     }
 
     public void minhasReservas() {
-<<<<<<< HEAD
         preferences = getActivity().getSharedPreferences(userPreferences, Context.MODE_PRIVATE);
         verificadorReserva = null;
 
@@ -121,9 +108,6 @@ public class MinhasReservas extends Fragment {
             e.printStackTrace();
         }
 
-=======
-
->>>>>>> 33b3478309104327f61a0e3dd774c0ecfbd3f5bb
 
     }
 }
