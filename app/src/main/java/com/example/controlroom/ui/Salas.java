@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.adapter.Adapter;
 import com.example.adapter.SalaAdapter;
+import com.example.adapter.TinyDB;
 import com.example.controlroom.R;
 import com.example.model.SalaModel;
 import com.example.services.VerificadorSalas;
@@ -37,9 +38,10 @@ public class Salas extends Fragment {
     private List<String> nomeSalas = new ArrayList<>();
     private ArrayAdapter<String> adapter;
     private ListView listSalas;
+    private TinyDB tinyDB;
 
 
-    private List<SalaModel> salas = new ArrayList<>();
+    private ArrayList<SalaModel> salas = new ArrayList<SalaModel>();
     //private Context context;
 
 
@@ -122,9 +124,11 @@ public class Salas extends Fragment {
                     nomeSalas.add(newSala.getNomeSala());
 
                 }
+
+                tinyDB.putListSalaObject("salas", salas);
                 listSalas = view.findViewById(R.id.lista_eventos);
-             //  SalaAdapter adapter = new SalaAdapter(nomeSalas, getActivity());
-             adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, nomeSalas);
+               SalaAdapter adapter = new SalaAdapter(salas, getActivity());
+            // adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, nomeSalas);
                 listSalas.setAdapter(adapter);
             }
 

@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentActivity;
 import com.example.controlroom.R;
 import com.example.model.SalaModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SalaAdapter extends BaseAdapter {
@@ -20,6 +21,7 @@ public class SalaAdapter extends BaseAdapter {
     private List<SalaModel> salas = null;
     private Activity act;
     private Context context;
+    private TinyDB tinyDB;
 
 
     public SalaAdapter(List<SalaModel> salas, Activity act, Context context) {
@@ -49,6 +51,10 @@ public class SalaAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = act.getLayoutInflater().inflate(R.layout.unidade_evento, parent, false);
+
+
+        tinyDB = new TinyDB(parent.getContext());
+        ArrayList<SalaModel> salas = tinyDB.getListSalaObject("salas");
 
         SalaModel sala = salas.get(position);
 
