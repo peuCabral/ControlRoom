@@ -15,6 +15,8 @@ import android.widget.ListView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.adapter.Adapter;
+import com.example.adapter.SalaAdapter;
 import com.example.controlroom.R;
 import com.example.model.SalaModel;
 import com.example.services.VerificadorSalas;
@@ -121,7 +123,8 @@ public class Salas extends Fragment {
 
                 }
                 listSalas = view.findViewById(R.id.lista_eventos);
-                adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, nomeSalas);
+             //  SalaAdapter adapter = new SalaAdapter(nomeSalas, getActivity());
+             adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, nomeSalas);
                 listSalas.setAdapter(adapter);
             }
 

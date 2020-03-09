@@ -32,7 +32,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:src="@drawable/logo_salas" />
+                tools:src="@drawable/conselho" />
 
             <TextView
                 android:id="@+id/nome_sala"
@@ -62,17 +62,44 @@
                 app:layout_constraintTop_toBottomOf="@id/unidade_evento_imagem" />
 
             <TextView
-                android:id="@+id/id_capacidade"
-                android:layout_width="158dp"
-                android:layout_height="22dp"
-                android:text="Capacidade Sala:"
-                android:textColor="@android:color/black"
+                android:id="@+id/unidade_evento_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:fontFamily="casual"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/unidade_evento_divisor" />
+                app:layout_constraintTop_toBottomOf="@id/unidade_evento_divisor"
+                tools:text="31/01/2020" />
+
+            <TextView
+                android:id="@+id/unidade_evento_horario"
+                android:layout_width="62dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="244dp"
+                android:layout_marginLeft="244dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="#FF8C00"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.94"
+                app:layout_constraintStart_toStartOf="@id/unidade_evento_data"
+                tools:text="14h30min" />
+
+            <TextView
+                android:id="@+id/unidade_evento_colaborador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textColor="#191970"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/unidade_evento_data"
+                app:layout_constraintTop_toBottomOf="@id/unidade_evento_data"
+                app:layout_constraintVertical_bias="0.45"
+                tools:text="Pedro Cabral" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
