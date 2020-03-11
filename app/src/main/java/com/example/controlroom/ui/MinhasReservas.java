@@ -12,6 +12,9 @@ import android.widget.ListView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.adapter.ReservaAdapter;
+import com.example.adapter.SalaAdapter;
 import com.example.controlroom.R;
 import com.example.model.ControlSalas;
 import com.example.services.VerificadorReserva;
@@ -89,7 +92,7 @@ public class MinhasReservas extends Fragment {
                         String horarioFimSplit = dataHoraFim.split("T")[1];
                         String horarioFimStr = horarioFimSplit.split(":00Z")[0];
 
-                        controlSalas.setHorarioInicio(horarioFimStr);
+                        controlSalas.setHorarioInicio(horarioFimStr.concat(" - "+horarioInicioStr));
 
 
                         controlSalasList.add(controlSalas);
@@ -99,7 +102,9 @@ public class MinhasReservas extends Fragment {
 
 
                 ListView ListaSalas = view.findViewById(R.id.ListaSalas);
-                ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1,controlSalasString);
+                ReservaAdapter adapter = new ReservaAdapter(controlSalasList, getActivity());
+
+//                ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1,controlSalasString);
                 ListaSalas.setAdapter(adapter);
             }
 

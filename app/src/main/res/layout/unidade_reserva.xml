@@ -7,11 +7,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/item_pacote_cardview"
-        android:layout_width="403dp"
-        android:layout_height="155dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,42 +60,44 @@
                 app:layout_constraintTop_toBottomOf="@id/unidade_evento_imagem" />
 
             <TextView
-                android:id="@+id/unidade_evento_data"
+                android:id="@+id/data_reserva"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/nome_sala"
                 app:layout_constraintTop_toBottomOf="@id/unidade_evento_divisor"
                 tools:text="31/01/2020" />
 
             <TextView
-                android:id="@+id/unidade_evento_horario"
-                android:layout_width="62dp"
-                android:layout_height="23dp"
-                android:layout_marginStart="244dp"
-                android:layout_marginLeft="244dp"
-                android:layout_marginBottom="16dp"
+                android:id="@+id/horario_reserva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="4dp"
                 android:textColor="#FF8C00"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.94"
-                app:layout_constraintStart_toStartOf="@id/unidade_evento_data"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/data_reserva"
+                app:layout_constraintTop_toBottomOf="@+id/unidade_evento_divisor"
                 tools:text="14h30min" />
 
             <TextView
-                android:id="@+id/unidade_evento_colaborador"
+                android:id="@+id/descricao_reserva"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:textColor="#191970"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@id/unidade_evento_data"
-                app:layout_constraintTop_toBottomOf="@id/unidade_evento_data"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/data_reserva"
+                app:layout_constraintTop_toBottomOf="@id/data_reserva"
                 app:layout_constraintVertical_bias="0.45"
                 tools:text="Pedro Cabral" />
 

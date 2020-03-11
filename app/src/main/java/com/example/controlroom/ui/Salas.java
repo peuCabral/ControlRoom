@@ -9,13 +9,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.content.SharedPreferences;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.adapter.Adapter;
 import com.example.adapter.SalaAdapter;
 import com.example.adapter.TinyDB;
 import com.example.controlroom.R;

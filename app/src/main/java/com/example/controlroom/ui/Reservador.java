@@ -202,9 +202,9 @@ public class Reservador extends AppCompatActivity {
 
             String respostaMetodo = new VerificadorReserva().execute(reservaEncoded).get();
 
-            if (respostaMetodo.equals("Reserva realizada com sucesso, consulte suas reservas no seu Perfil")) {
+            if (respostaMetodo.equals("Reserva realizada com sucesso")) {
 
-                Toast.makeText(Reservador.this, "Reserva realizada com sucesso! Consulte suas reservas no Perfil", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Reservador.this, "Reserva realizada com sucesso!", Toast.LENGTH_SHORT).show();
 
                 onBackPressed();
 
