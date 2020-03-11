@@ -497,6 +497,7 @@ public class TinyDB {
      * @param key SharedPreferences key
      */
     public void remove(String key) {
+
         preferences.edit().remove(key).apply();
     }
 

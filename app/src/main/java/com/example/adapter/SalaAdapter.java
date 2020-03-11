@@ -1,14 +1,11 @@
 package com.example.adapter;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.fragment.app.FragmentActivity;
 
 import com.example.controlroom.R;
 import com.example.model.SalaModel;
@@ -18,19 +15,13 @@ import java.util.List;
 
 public class SalaAdapter extends BaseAdapter {
 
-    private List<SalaModel> salas = null;
+    private List<SalaModel> salas ;
     private Activity act;
-    private Context context;
     private TinyDB tinyDB;
 
-
-    public SalaAdapter(List<SalaModel> salas, Activity act, Context context) {
+    public SalaAdapter(List<SalaModel> salas, Activity act) {
         this.salas = salas;
         this.act = act;
-        this.context = context;
-    }
-
-    public SalaAdapter(List<SalaModel> salas, FragmentActivity activity) {
     }
 
     @Override
@@ -50,11 +41,8 @@ public class SalaAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = act.getLayoutInflater().inflate(R.layout.unidade_evento, parent, false);
+        View view = act.getLayoutInflater().inflate(R.layout.unidade_sala, parent, false);
 
-
-        tinyDB = new TinyDB(parent.getContext());
-        ArrayList<SalaModel> salas = tinyDB.getListSalaObject("salas");
 
         SalaModel sala = salas.get(position);
 
@@ -64,9 +52,27 @@ public class SalaAdapter extends BaseAdapter {
         TextView capacidade = (TextView)
                 view.findViewById(R.id.id_capacidade);
 
+        ImageView imageView = (ImageView)
+                view.findViewById(R.id.unidade_evento_imagem);
 
-        nomeSala.setText(sala.getNomeSala());
-        capacidade.setText(sala.getCapacidade());
+        imageView.setImageResource(R.drawable.logo_salas);
+
+
+
+        tinyDB = new TinyDB(parent.getContext());
+        ArrayList<SalaModel> salas = tinyDB.getListSalaObject("salas");
+
+        for (int i = 0; i < salas.size(); i++) {
+
+            if (salas.get(i).getId() == sala.getId()) {
+
+                nomeSala.setText(salas.get(i).getNomeSala());
+                capacidade.setText("Capacidade Sala: "+salas.get(i).getCapacidade());
+
+            }
+
+
+        }
 
 
         return view;

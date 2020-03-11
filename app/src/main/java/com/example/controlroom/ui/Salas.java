@@ -64,6 +64,7 @@ public class Salas extends Fragment {
 
         listSalas = view.findViewById(R.id.lista_eventos);
 
+        tinyDB = new TinyDB(getContext());
 
         inserirSalas();
         abrirListaDetalhes();
@@ -121,14 +122,15 @@ public class Salas extends Fragment {
                     newSala.setMultimidia(multimidia);
 
                     salas.add(newSala);
-                    nomeSalas.add(newSala.getNomeSala());
+//                    nomeSalas.add(newSala.getNomeSala());
 
                 }
 
                 tinyDB.putListSalaObject("salas", salas);
+
                 listSalas = view.findViewById(R.id.lista_eventos);
                SalaAdapter adapter = new SalaAdapter(salas, getActivity());
-            // adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, nomeSalas);
+//             adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, nomeSalas);
                 listSalas.setAdapter(adapter);
             }
 

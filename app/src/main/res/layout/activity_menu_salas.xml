@@ -82,14 +82,12 @@
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="569dp"
-        android:maxHeight="540dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bottom_navigation"
         app:layout_constraintVertical_bias="0.058">
-
     </FrameLayout>
 
 
