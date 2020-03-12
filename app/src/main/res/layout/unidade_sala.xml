@@ -55,7 +55,7 @@
                 android:id="@+id/unidade_evento_divisor"
                 android:layout_width="0dp"
                 android:layout_height="3dp"
-                android:background="@android:color/holo_orange_dark"
+                android:background="@android:color/holo_purple"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/unidade_evento_imagem" />

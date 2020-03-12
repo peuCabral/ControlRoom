@@ -13,25 +13,26 @@
         android:layout_height="733dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/nova_tela_estilo" />
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="44dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="38dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/icone_senha"
         app:layout_constraintEnd_toStartOf="@+id/senhaText"
-        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintHorizontal_bias="0.898"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13"
-        android:src="@drawable/icone_senha" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="37dp"
-        android:layout_height="35dp"
+        android:layout_width="38dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@+id/emailText"
         app:layout_constraintHorizontal_bias="0.863"
@@ -54,64 +55,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/butao_cadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="260dp"
-        android:background="@null"
-        android:tint="@null"
+        android:background="@android:drawable/btn_default"
+        android:text="Cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nameText"
-        app:srcCompat="@mipmap/btn_login" />
+        app:layout_constraintTop_toTopOf="@+id/nameText" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="38dp"
         android:layout_height="45dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="248dp"
         app:layout_constraintEnd_toStartOf="@+id/nameText"
-        app:layout_constraintHorizontal_bias="0.828"
+        app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/icone_nome_circle" />
-
-    <ImageButton
-        android:id="@+id/return_button"
-        style="@android:style/Widget.Holo.ImageButton"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="16dp"
-        android:rotation="180"
-        android:src="@drawable/ic_setinha"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/nameText"
         style="@style/EditTextFormField"
         android:layout_width="247dp"
         android:layout_height="40dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="252dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:background="@drawable/shape_edit_text"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
         android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.648"
-        app:layout_constraintStart_toStartOf="@+id/return_button"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/senhaText"
         style="@style/EditTextFormField"
-        android:layout_width="253dp"
-        android:layout_height="41dp"
+        android:layout_width="247dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/shape_edit_text"
         android:ems="10"
@@ -126,7 +113,7 @@
     <EditText
         android:id="@+id/emailText"
         style="@style/EditTextFormField"
-        android:layout_width="255dp"
+        android:layout_width="247dp"
         android:layout_height="40dp"
         android:layout_margin="8dp"
         android:layout_marginTop="12dp"

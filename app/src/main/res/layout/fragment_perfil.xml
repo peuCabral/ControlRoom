@@ -127,16 +127,16 @@
        app:layout_constraintHorizontal_bias="0.95"
        app:layout_constraintStart_toEndOf="@+id/textView5" />
 
-   <ImageButton
+   <Button
        android:id="@+id/btn_editar"
+       style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
        android:layout_width="43dp"
        android:layout_height="39dp"
        android:layout_marginStart="72dp"
        android:layout_marginLeft="72dp"
        android:layout_marginBottom="76dp"
        app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintStart_toStartOf="parent"
-       app:srcCompat="@mipmap/ic_editar" />
+       app:layout_constraintStart_toStartOf="parent" />
 
    <TextView
        android:id="@+id/textView5"

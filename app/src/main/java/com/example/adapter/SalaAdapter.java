@@ -67,7 +67,7 @@ public class SalaAdapter extends BaseAdapter {
             if (salas.get(i).getId() == sala.getId()) {
 
                 nomeSala.setText(salas.get(i).getNomeSala());
-                capacidade.setText("Capacidade Sala: "+salas.get(i).getCapacidade());
+                capacidade.setText("Capacidade Sala: "+salas.get(i).getCapacidade() + " pessoas");
 
             }
 

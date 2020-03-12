@@ -44,7 +44,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
         android:layout_marginBottom="24dp"
+        android:background="@android:drawable/btn_default"
         android:text="Realize seu Login"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,8 +54,7 @@
         app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="@+id/cadastrar"
         app:layout_constraintTop_toBottomOf="@+id/cadastrar"
-        app:layout_constraintVertical_bias="0.437"
-        android:layout_marginRight="58dp" />
+        app:layout_constraintVertical_bias="0.437" />
 
     <TextView
         android:id="@+id/ou"
@@ -77,11 +78,12 @@
     <Button
         android:id="@+id/cadastrar"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="147dp"
+        android:layout_height="46dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="356dp"
         android:layout_marginEnd="24dp"
+        android:background="@android:drawable/btn_default"
         android:text="Cadastre-se"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,17 +106,17 @@
        android:layout_marginLeft="16dp"
        android:layout_marginRight="5dp" />
 
-   <ImageView
-     android:id="@+id/imageView4"
-    android:layout_width="69dp"
-      android:layout_height="69dp"
-      android:layout_marginStart="24dp"
-       android:layout_marginEnd="24dp"
-      app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintStart_toStartOf="parent"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/icone_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fundo"
-        app:layout_constraintVertical_bias="0.159"
-        android:src="@drawable/icone_app" />
+        app:layout_constraintVertical_bias="0.099" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

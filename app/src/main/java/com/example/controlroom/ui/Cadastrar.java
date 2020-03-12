@@ -31,20 +31,24 @@ import java.util.List;
 
 public class Cadastrar extends AppCompatActivity {
 
-    private ImageButton return_button;
-    private ImageButton butao_cadastrar;
+    private Button butao_cadastrar;
     private EditText nameText;
     private EditText emailText;
     private EditText senhaText;
     private Spinner spinnerEmpresa;
     List<Empresa> empresaList = new ArrayList<>();
     List<String> empresaListaNomes = new ArrayList<>();
+    private  String dominio;
     int idEmpresa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar);
+
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         StartComponents();
 
@@ -56,12 +60,10 @@ public class Cadastrar extends AppCompatActivity {
         emailText = findViewById(R.id.emailText);
         senhaText = findViewById(R.id.senhaText);
         butao_cadastrar = findViewById(R.id.butao_cadastrar);
-        return_button = findViewById(R.id.return_button);
         spinnerEmpresa = findViewById(R.id.spinnerEmpresa);
 
         cadastrar();
         inicializaEmailFocusListener();
-        voltarTela();
 
         clickSpinner();
 
@@ -144,7 +146,7 @@ public class Cadastrar extends AppCompatActivity {
                     if (emailAfterTextChanged.contains("@")) {
                         String[] emailCompleto = emailAfterTextChanged.split("@");
                         if (emailCompleto.length > 1) {
-                            String dominio = emailCompleto[1];
+                             dominio = emailCompleto[1];
                             if (dominio.contains(".")) {
                                 System.out.println("dominio: " + dominio);
                                 try {
@@ -197,7 +199,7 @@ public class Cadastrar extends AppCompatActivity {
 
 
                                         } else {
-                                            mostrarMensagem("Erro");
+                                            mostrarMensagem("Dominio de Email Invalido");
 
                                         }
 
@@ -238,15 +240,6 @@ public class Cadastrar extends AppCompatActivity {
         });
     }
 
-    private void voltarTela() {
-        return_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startClass(Cadastro_ou_Login.class);
-            }
-        });
-    }
-
 
     private void startClass(Class classe) {
         Intent intent = new Intent(this, classe);
@@ -259,7 +252,7 @@ public class Cadastrar extends AppCompatActivity {
         boolean chave = true;
 
         if (emailText.getText().toString().trim().isEmpty() || !emailText.getText().toString().trim().contains("@")
-                || !emailText.getText().toString().trim().contains(".")) {
+                || !emailText.getText().toString().trim().contains(".")|| emailText.getText().toString().trim().contains(dominio.toLowerCase())) {
             emailText.setError("Insira um e-mail válido!");
             chave = false;
         }
@@ -283,5 +276,11 @@ public class Cadastrar extends AppCompatActivity {
         Toast.makeText(this, mensagem, Toast.LENGTH_LONG).show();
     }
 
+    public boolean onSupportNavigateUp(){
+
+        onBackPressed();
+
+        return  true;
+    }
 
 }

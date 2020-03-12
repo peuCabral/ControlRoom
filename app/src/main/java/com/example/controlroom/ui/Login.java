@@ -23,9 +23,8 @@ public class Login extends AppCompatActivity {
 
     private EditText email;
     private EditText senha;
-    private ImageButton btn_login;
+    private Button btn_login;
 
-    private ImageButton return_button2;
     public static final String Name = "nameKey";
     public static final String Email = "emailKey";
     private SharedPreferences preferences;
@@ -36,6 +35,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         preferences = getSharedPreferences(userPreferences, Context.MODE_PRIVATE);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
   /*/      if(preferences.contains("userEmail")){
 
@@ -54,16 +56,13 @@ public class Login extends AppCompatActivity {
 
         email = findViewById(R.id.loginEmail);
         senha = findViewById(R.id.loginSenha);
-        return_button2 = findViewById(R.id.return_button2);
 
         realizandoLogin();
 
-        return_button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                abrirClasse(Cadastro_ou_Login.class);
+        {
+
             }
-        });
+
 
     }
 
@@ -79,10 +78,10 @@ public class Login extends AppCompatActivity {
                     try {
                         String authReturn = new Verificador().execute(emailStr, senhaStr).get();
 
-                        Toast.makeText(getApplicationContext(),authReturn,Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), authReturn, Toast.LENGTH_LONG).show();
 
                         if (authReturn.length() > 0) {
-                           // Toast.makeText(getApplicationContext(), "Login realizado com sucesso", Toast.LENGTH_LONG).show();
+                            // Toast.makeText(getApplicationContext(), "Login realizado com sucesso", Toast.LENGTH_LONG).show();
 
                             JSONObject usuarioJSON = new JSONObject(authReturn);
 
@@ -154,7 +153,6 @@ public class Login extends AppCompatActivity {
     }
 
 
-
     private void abrirClasse(Class classe) {
         Intent intent = new Intent(this, classe);
         startActivity(intent);
@@ -184,8 +182,13 @@ public class Login extends AppCompatActivity {
         editor.commit();
     }
 
+    public boolean onSupportNavigateUp() {
+
+        onBackPressed();
+
+        return true;
+    }
+
 }
-
-
 
 
