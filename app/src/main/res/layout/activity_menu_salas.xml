@@ -3,92 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/colorFundo"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorFundoSalas">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_banner_inicial_eventos"
-        app:menu="@menu/button_navigation">
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
- <!--   <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:scaleType="fitXY"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fundo_salas" />-->
-
-    <ImageView
-        android:id="@+id/id_banner_inicial_eventos"
-        android:layout_width="426dp"
-        android:layout_height="89dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@color/colorPrimary" />
+        app:layout_constraintVertical_bias="1.0">
 
-    <TextView
-        android:id="@+id/id_titulo_page"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="2dp"
-        android:gravity="start"
-        android:text="Salas de Reuniao"
-        android:textAlignment="viewStart"
-        android:textColor="@android:color/white"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="@id/id_banner_inicial_eventos"
-        app:layout_constraintEnd_toEndOf="@id/id_banner_inicial_eventos"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/id_banner_inicial_eventos"
-        app:layout_constraintTop_toTopOf="@id/id_banner_inicial_eventos"
-        app:layout_constraintVertical_bias="0.0" />
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:columnWidth="120dp"
+            android:horizontalSpacing="20dp"
+            android:numColumns="2"
+            android:padding="5dp"
+            android:verticalSpacing="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:listitem="@layout/item_sala">
 
-    <TextView
-        android:id="@+id/id_descricao_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="600dp"
-        android:gravity="start"
-        android:text="Salas Cadastradas e suas Disponibilidades"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textColor="#FAF5F5"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_titulo_page"
-        app:layout_constraintVertical_bias="0.07999998" />
+        </GridView>
 
-    <FrameLayout
-        android:id="@+id/frame_layout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bottom_navigation"
-        app:layout_constraintVertical_bias="0.058">
-    </FrameLayout>
-
-
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -31,14 +31,14 @@ import java.util.List;
 
 public class Cadastrar extends AppCompatActivity {
 
-    private Button butao_cadastrar;
+    private ImageButton return_button;
+    private ImageButton butao_cadastrar;
     private EditText nameText;
     private EditText emailText;
     private EditText senhaText;
     private Spinner spinnerEmpresa;
     List<Empresa> empresaList = new ArrayList<>();
     List<String> empresaListaNomes = new ArrayList<>();
-    private  String dominio;
     int idEmpresa;
 
     @Override
@@ -46,24 +46,22 @@ public class Cadastrar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar);
 
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        StartComponents();
+        iniciarComponentes();
 
     }
 
-    private void StartComponents() {
+    private void iniciarComponentes() {
 
         nameText = findViewById(R.id.nameText);
         emailText = findViewById(R.id.emailText);
         senhaText = findViewById(R.id.senhaText);
         butao_cadastrar = findViewById(R.id.butao_cadastrar);
+        return_button = findViewById(R.id.return_button);
         spinnerEmpresa = findViewById(R.id.spinnerEmpresa);
 
         cadastrar();
         inicializaEmailFocusListener();
+        voltarTela();
 
         clickSpinner();
 
@@ -146,18 +144,20 @@ public class Cadastrar extends AppCompatActivity {
                     if (emailAfterTextChanged.contains("@")) {
                         String[] emailCompleto = emailAfterTextChanged.split("@");
                         if (emailCompleto.length > 1) {
-                             dominio = emailCompleto[1];
+                            String dominio = emailCompleto[1];
                             if (dominio.contains(".")) {
                                 System.out.println("dominio: " + dominio);
                                 try {
                                     String organizacoesStringFromServer = new VerificadorEmpresa().execute(dominio).get();
                                     System.out.println("Organizações em string: " + organizacoesStringFromServer);
 
+                                    // 1 - verifica se a string nao eh vazia -> exibe erro dizendo q n existe organizacao com o dominio informado
 
                                     if (organizacoesStringFromServer.length() > 0) {
 
                                         JSONArray jsonArray = new JSONArray(organizacoesStringFromServer);
 
+                                        // 3 - verifica o length do array > 0
 
                                         if (jsonArray.length() > 0) {
 
@@ -192,14 +192,23 @@ public class Cadastrar extends AppCompatActivity {
                                                     spinnerEmpresa.setVisibility(View.VISIBLE);
 
 
+
                                                 }
 
 
                                             }
 
 
+                                            // 4 - se tem coisa no array, pega a posicao do array e inicializa um jsonobject
+
+                                            // 5 - verifica se o jsonObject possui os campos id, nome e tipoOrganizacao
+
+                                            // 6 - se ele possuir esses 3 atributos, entao voce passa pra variaveis
+                                            // 7 - criar em tempo de execuao um spinner com os as organizacoes
+
+
                                         } else {
-                                            mostrarMensagem("Dominio de Email Invalido");
+                                            mostrarMensagem("Erro");
 
                                         }
 
@@ -240,6 +249,15 @@ public class Cadastrar extends AppCompatActivity {
         });
     }
 
+    private void voltarTela() {
+        return_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startClass(Cadastro_ou_Login.class);
+            }
+        });
+    }
+
 
     private void startClass(Class classe) {
         Intent intent = new Intent(this, classe);
@@ -252,7 +270,7 @@ public class Cadastrar extends AppCompatActivity {
         boolean chave = true;
 
         if (emailText.getText().toString().trim().isEmpty() || !emailText.getText().toString().trim().contains("@")
-                || !emailText.getText().toString().trim().contains(".")|| emailText.getText().toString().trim().contains(dominio.toLowerCase())) {
+                || !emailText.getText().toString().trim().contains(".")) {
             emailText.setError("Insira um e-mail válido!");
             chave = false;
         }
@@ -276,11 +294,5 @@ public class Cadastrar extends AppCompatActivity {
         Toast.makeText(this, mensagem, Toast.LENGTH_LONG).show();
     }
 
-    public boolean onSupportNavigateUp(){
-
-        onBackPressed();
-
-        return  true;
-    }
 
 }

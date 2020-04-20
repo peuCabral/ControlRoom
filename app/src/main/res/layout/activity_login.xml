@@ -9,21 +9,22 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="433dp"
-        android:layout_height="771dp"
+        android:layout_width="match_parent"
+        android:layout_height="738dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/nova_tela_estilo" />
+        app:layout_constraintVertical_bias="0.94"
+        app:srcCompat="@drawable/melhor_login" />
 
     <TextView
         android:id="@+id/loginText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="412dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="monospace"
         android:text="Realize o seu Login"
@@ -31,33 +32,57 @@
         android:textColor="#F3EEEE"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/icone_do_login"
+        android:layout_width="37dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/loginEmail"
+        app:layout_constraintTop_toTopOf="@+id/loginEmail"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/icone_login_circle" />
+
+    <ImageView
         android:id="@+id/icone_senha"
-        android:layout_width="31dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="48dp"
         android:contentDescription="senha"
         android:src="@drawable/icone_senha"
-        app:layout_constraintEnd_toStartOf="@+id/loginSenha"
-        app:layout_constraintHorizontal_bias="0.744"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icone_email" />
+        app:layout_constraintEnd_toEndOf="@+id/icone_do_login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/icone_do_login"
+        app:layout_constraintTop_toTopOf="@+id/icone_do_login" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_login"
-        android:layout_width="122dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginBottom="100dp"
-        android:background="@android:drawable/btn_default"
-        android:text="Confirmar"
+        android:layout_width="51dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginBottom="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/btn_login" />
+
+    <ImageButton
+        android:id="@+id/return_button2"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:rotation="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_setinha" />
 
     <EditText
         android:id="@+id/loginEmail"
@@ -65,21 +90,21 @@
         android:layout_width="235dp"
         android:layout_height="41dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginTop="84dp"
         android:background="@drawable/shape_edit_text"
         android:ems="10"
         android:hint="Login"
         android:inputType="textEmailAddress"
         android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/loginSenha"
         style="@style/EditTextFormField"
-        android:layout_width="235dp"
+        android:layout_width="231dp"
         android:layout_height="41dp"
         android:layout_margin="8dp"
         android:layout_marginTop="4dp"
@@ -89,19 +114,8 @@
         android:inputType="text"
         android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintHorizontal_bias="0.616"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
-
-    <ImageView
-        android:id="@+id/icone_email"
-        android:layout_width="31dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="148dp"
-        android:src="@drawable/ic_email_black_24dp"
-        app:layout_constraintEnd_toStartOf="@+id/loginEmail"
-        app:layout_constraintHorizontal_bias="0.741"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
